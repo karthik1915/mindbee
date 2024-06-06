@@ -19,7 +19,7 @@ const VideoPlayer: React.FC = () => {
 
   return (
     <div className="relative">
-      <video ref={videoRef} className="h-auto w-screen" muted>
+      <video ref={videoRef} className="mx-auto h-auto w-full max-w-6xl" muted>
         <source src="/intro.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
