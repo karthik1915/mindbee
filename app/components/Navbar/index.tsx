@@ -9,6 +9,7 @@ import {
   NavigationMenuItem,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import Sidebar from "./sidebar";
 
 type Props = {};
 
@@ -52,17 +53,21 @@ const NavBar = (props: Props) => {
               <div>here</div>
             </NavigationMenuContent>
           </NavigationMenuItem>
+          <Link className="px-2 py-1 text-xl" href="/#about">
+            Contact
+          </Link>
         </NavigationMenuList>
       </NavigationMenu>
-
-      <Button>Contact Us</Button>
+      <div className="lg:hidden">
+        <Sidebar />
+      </div>
     </div>
   );
 };
 
 const Button = (children: { children: React.ReactNode }) => {
   return (
-    <button className="bg-primary text-primary-foreground hidden rounded-lg px-3 py-2 lg:block">
+    <button className="hidden rounded-lg bg-primary px-3 py-2 text-primary-foreground lg:block">
       Contact Us
     </button>
   );
