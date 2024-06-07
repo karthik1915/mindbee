@@ -47,9 +47,21 @@ export function OrbitingSection() {
         </OrbitingCircles>
       </div>
       <div>
-        <p className="text-4xl font-semibold">Constantly Evolving Landscape</p>
-        <p>We cover best courses for salesforce</p>
-        <p>Further content can be added here</p>
+        <p className="mb-6 text-3xl font-bold lg:text-5xl">
+          Constantly Evolving Landscape
+        </p>
+        <div className="grid grid-cols-2 grid-rows-2 px-5 text-left lg:px-0">
+          <p className="font-oxygen text-xl font-semibold"># Best Courses</p>
+          <div className="mb-3">
+            Best courses for salesforce online
+            <p className="cursor-pointer font-semibold underline">Learn More</p>
+          </div>
+          <p className="font-oxygen text-xl font-semibold"># Best Practices</p>
+          <div className="">
+            Best courses for salesforce online
+            <p className="cursor-pointer font-semibold underline">Learn More</p>
+          </div>
+        </div>
       </div>
     </div>
   );

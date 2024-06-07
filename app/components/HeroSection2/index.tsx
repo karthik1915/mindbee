@@ -5,7 +5,7 @@ import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
 
 const HerSection2 = () => {
   return (
-    <div className="relative flex h-[60vh] w-full items-center overflow-hidden bg-background p-10 lg:items-center lg:p-20">
+    <div className="relative flex h-[75vh] w-full items-center overflow-hidden bg-background p-10 lg:items-center lg:p-20">
       <p className="z-10 whitespace-pre-wrap text-center font-oxygen text-4xl font-medium text-black dark:text-white lg:text-left lg:text-6xl">
         Better Business Starts with
         <br />
