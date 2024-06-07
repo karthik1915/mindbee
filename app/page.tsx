@@ -3,7 +3,6 @@ import HeroSection from "./components/HeroSection";
 import HeroSection2 from "./components/HeroSection2";
 import { OrbitingSection } from "./components/OrbitingSection";
 import Reviews from "./components/Reviews";
-import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <OrbitingSection />
       <Courses />
       <Reviews />
-      <Footer />
     </>
   );
 }

@@ -51,6 +51,12 @@ function Reviews({}: Props) {
     <div className="relative mx-auto grid w-full max-w-6xl grid-rows-[0.3fr,1fr] items-center justify-center text-center lg:grid-cols-[0.8fr,1fr] lg:grid-rows-1 lg:items-center lg:justify-start lg:text-left">
       <div>
         <p className="mb-6 text-5xl font-bold">What People told About us</p>
+        <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white px-5 py-2 text-lg font-medium text-black backdrop-blur-3xl transition-all duration-200 hover:bg-opacity-65">
+            Leave a Review
+          </span>
+        </button>
       </div>
       <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden bg-background py-20">
         <Marquee pauseOnHover className="[--duration:20s]">
@@ -63,8 +69,8 @@ function Reviews({}: Props) {
             <ReviewCard key={review.username} {...review} />
           ))}
         </Marquee>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/5 bg-gradient-to-r from-white dark:from-background"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/5 bg-gradient-to-l from-white dark:from-background"></div>
       </div>
     </div>
   );

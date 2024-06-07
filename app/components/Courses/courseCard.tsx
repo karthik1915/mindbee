@@ -9,29 +9,32 @@ type Props = {
 
 function CourseCard({ props }: Props) {
   return (
-    <ShineBorder color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}>
-      <div className="flex size-96 max-w-96 flex-col items-center justify-between rounded-2xl p-4">
-        <div className="h-auto w-full">
-          <Image
-            src={props.imageUrl}
-            alt={props.title}
-            width={1000}
-            height={150}
-            objectFit="cover"
-            loading="lazy"
-          />
+    <div className="m-7 rounded-[8px] border hover:shadow-lg">
+      <ShineBorder duration={10} color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}>
+        <div className="w-76 flex h-96 max-w-96 flex-col items-center justify-between rounded-2xl p-3">
+          <div className="h-auto w-full">
+            <Image
+              src={props.imageUrl}
+              alt={props.title}
+              width={1000}
+              height={150}
+              objectFit="cover"
+              loading="lazy"
+            />
+          </div>
+          <p className="font-oxygen text-xl font-semibold uppercase">
+            {props.title}
+          </p>
+          <div className="flex gap-4">
+            <p>{props.enrollment} Enrollment</p>
+            <p>{props.stars} Rating</p>
+          </div>
+          <button className="w-full rounded-md border border-black bg-white/[0.2] px-4 py-2 text-black backdrop-blur-sm transition duration-200 hover:shadow-[0px_0px_4px_4px_rgba(0,0,0,0.1)]">
+            Learn More
+          </button>
         </div>
-        <div className="flex w-full flex-grow flex-col items-center justify-between">
-          <p className="font-oxygen text-2xl font-semibold">{props.title}</p>
-          <a className="relative p-[3px]" href={props.courseLink}>
-            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#A07CFE] via-[#FE8FB5] to-[#FFBE7B]" />
-            <div className="group relative rounded-[6px] bg-background px-8 py-2 text-xl font-semibold text-black transition duration-200 hover:bg-transparent">
-              Learn More
-            </div>
-          </a>
-        </div>
-      </div>
-    </ShineBorder>
+      </ShineBorder>
+    </div>
   );
 }
 

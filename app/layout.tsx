@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "./components/Navbar";
 
 import { cn } from "@/lib/utils";
+import Footer from "./components/footer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -30,13 +31,14 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen overflow-x-hidden bg-background font-sans antialiased",
+          "min-h-screen overflow-x-hidden scroll-smooth bg-background font-sans antialiased",
           fontSans.variable,
           oxygen.variable,
         )}
       >
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -50,7 +50,7 @@ export function OrbitingSection() {
         <p className="mb-6 text-3xl font-bold lg:text-5xl">
           Constantly Evolving Landscape
         </p>
-        <div className="grid grid-cols-2 grid-rows-2 px-5 text-left lg:px-0">
+        <div className="grid grid-cols-2 grid-rows-2 justify-center px-5 text-center md:text-left lg:px-0">
           <p className="font-oxygen text-xl font-semibold"># Best Courses</p>
           <div className="mb-3">
             Best courses for salesforce online
