@@ -2,12 +2,11 @@
 
 import { cn } from "@/lib/utils";
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
-import GradualSpacing from "@/components/magicui/gradual-spacing";
 
 const HerSection2 = () => {
   return (
-    <div className="relative flex h-[60vh] w-full items-center overflow-hidden bg-background p-10 lg:items-end lg:p-20">
-      <p className="z-10 whitespace-pre-wrap text-center text-4xl font-medium tracking-tighter text-black dark:text-white lg:text-left lg:text-6xl">
+    <div className="relative flex h-[60vh] w-full items-center overflow-hidden bg-background p-10 lg:items-center lg:p-20">
+      <p className="z-10 whitespace-pre-wrap text-center font-oxygen text-4xl font-medium text-black dark:text-white lg:text-left lg:text-6xl">
         Better Business Starts with
         <br />
         Better Service Consultation

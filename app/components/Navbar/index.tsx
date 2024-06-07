@@ -15,7 +15,7 @@ type Props = {};
 
 const NavBar = (props: Props) => {
   return (
-    <div className="mx-auto flex w-screen max-w-6xl items-center justify-between px-3 py-5 text-lg">
+    <div className="flex w-screen items-center justify-between px-3 py-5 pr-6 text-lg">
       <Link href="/">
         <div>LOGO</div>
       </Link>
