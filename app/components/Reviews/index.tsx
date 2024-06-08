@@ -48,7 +48,7 @@ const secondRow = reviews.slice(reviews.length / 2);
 
 function Reviews({}: Props) {
   return (
-    <div className="relative mx-auto grid w-full max-w-6xl grid-rows-[0.3fr,1fr] items-center justify-center text-center lg:grid-cols-[0.8fr,1fr] lg:grid-rows-1 lg:items-center lg:justify-start lg:text-left">
+    <div className="relative mx-auto grid w-full max-w-6xl grid-rows-[0.4fr,1fr] items-center justify-center text-center lg:grid-cols-[0.8fr,1fr] lg:grid-rows-1 lg:items-center lg:justify-start lg:text-left">
       <div>
         <p className="mb-6 text-5xl font-bold">What People told About us</p>
         <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">

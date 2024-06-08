@@ -16,7 +16,81 @@ type Props = {};
 
 const primaryColor = "rgb(13 148 136)";
 
-function Footer({}: Props) {
+function Footer() {
+  return (
+    <>
+      <div className="mx-auto my-10 grid h-auto w-full max-w-7xl grid-cols-2 gap-6 px-5 md:grid-cols-3 md:gap-0 lg:grid-cols-4">
+        <div className="col-span-3 pl-8 md:col-span-1">
+          Logo and description
+        </div>
+        <div>
+          <p className="text-center font-oxygen text-lg font-semibold">
+            Company
+          </p>
+          <div className="text-center">
+            <Link className="my-2 block" href="/">
+              Home
+            </Link>
+            <Link className="my-2 block" href="/">
+              About
+            </Link>
+            <Link className="my-2 block" href="/">
+              Services
+            </Link>
+            <Link className="my-2 block" href="/">
+              Blogs
+            </Link>
+          </div>
+        </div>
+        <div>
+          <p className="text-center font-oxygen text-lg font-semibold">
+            Support
+          </p>
+          <div className="text-center">
+            <Link className="my-2 block" href="/">
+              Rules & privacy
+            </Link>
+
+            <Link className="my-2 block" href="/">
+              Refund Policy
+            </Link>
+            <Link className="my-2 block" href="/">
+              Contact Us
+            </Link>
+            <Link className="my-2 block" href="/">
+              Programs
+            </Link>
+          </div>
+        </div>
+        <div className="col-span-3 pl-8 lg:col-span-1">
+          <p className="mb-4 font-oxygen text-2xl font-bold lg:ml-4">
+            Get in touch
+          </p>
+          <div className="mx-auto space-y-5">
+            <div className="flex items-center">
+              <LocationIcon fill={primaryColor} />
+              <span className="ml-1">{Details.address}</span>
+            </div>
+            <div className="flex items-center">
+              <PhoneIcon fill={primaryColor} />
+              <span className="ml-1">{Details.number}</span>
+            </div>
+            <div className="flex items-center">
+              <MailIcon fill={primaryColor} />
+              <span className="ml-1">{Details.address}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="mx-6 border-b border-gray-200"></div>
+      <div className="my-4 px-8 text-center">
+        &copy;&nbsp;2024 all rights reserved
+      </div>
+    </>
+  );
+}
+
+function Footer1({}: Props) {
   return (
     <div className="mt-8 grid h-auto w-full grid-cols-2 grid-rows-2 bg-primary p-4 text-primary-foreground lg:grid-cols-4 lg:grid-rows-1">
       <div className="p-2 lg:p-4">
