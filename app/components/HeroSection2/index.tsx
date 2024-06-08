@@ -7,11 +7,20 @@ import { HighlightText } from "./HighlightText";
 
 const HerSection2 = () => {
   return (
-    <div className="relative flex h-[45vh] w-full items-center overflow-hidden bg-background p-10 md:h-[50vh] lg:h-[75vh] lg:items-center lg:p-20">
+    <div className="relative flex h-[45vh] w-full items-center overflow-hidden bg-background p-10 md:h-[50vh] lg:h-[75vh] lg:items-center lg:p-16">
       <div className="z-10 whitespace-pre-wrap text-center font-oxygen text-4xl font-medium text-black dark:text-white lg:text-left lg:text-6xl">
         {HighlightText("Consultation")}
       </div>
-      {/* <AnimatedGridPattern
+
+      <BackgroundBeams />
+    </div>
+  );
+};
+
+export default HerSection2;
+
+{
+  /* <AnimatedGridPattern
         numSquares={30}
         maxOpacity={0.6}
         duration={3}
@@ -20,10 +29,5 @@ const HerSection2 = () => {
           "[mask-image:radial-gradient(1000px_circle_at_center,black,transparent)]",
           "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
         )}
-      /> */}
-      <BackgroundBeams />
-    </div>
-  );
-};
-
-export default HerSection2;
+      /> */
+}

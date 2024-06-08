@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import Sidebar from "./sidebar";
 import NavServices from "./NavServices";
+import ScrollLink from "./ScrollLink";
 
 type Props = {};
 
@@ -23,9 +24,9 @@ const NavBar = (props: Props) => {
         <Link className="px-2 py-1 text-xl" href="/">
           Home
         </Link>
-        <Link className="px-2 py-1 text-xl" href="/#about">
+        <ScrollLink href="/#about" className="px-2 py-1 text-xl">
           About
-        </Link>
+        </ScrollLink>
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavServices />

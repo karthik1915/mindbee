@@ -1,5 +1,5 @@
 export interface courseProps {
-  id: number;
+  id: string;
   title: string;
   enrollment: string;
   stars: number;
@@ -11,7 +11,7 @@ export interface courseProps {
 
 export const CoursesList: courseProps[] = [
   {
-    id: 1,
+    id: "course-1",
     title: "Salesforce admin",
     enrollment: "12k",
     stars: 4.7,
@@ -24,7 +24,7 @@ export const CoursesList: courseProps[] = [
     courseLink: "/courses",
   },
   {
-    id: 2,
+    id: "course-2",
     title: "Salesforce developer",
     enrollment: "8k",
     stars: 4.9,
@@ -37,7 +37,7 @@ export const CoursesList: courseProps[] = [
     courseLink: "/courses",
   },
   {
-    id: 3,
+    id: "course-3",
     title: "Salesforce App Builder",
     enrollment: "10k",
     stars: 4.8,

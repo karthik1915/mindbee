@@ -6,7 +6,10 @@ type Props = {};
 function Courses({}: Props) {
   return (
     <>
-      <p className="px-5 text-center font-oxygen text-4xl font-bold">
+      <p
+        id="services"
+        className="px-5 text-center font-oxygen text-4xl font-bold"
+      >
         Lead the Way, Acquire Certifications from Top-Tier Programs
       </p>
       <p className="my-3 px-5 text-center text-xl">
