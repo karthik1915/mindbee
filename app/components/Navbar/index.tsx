@@ -15,8 +15,33 @@ import ScrollLink from "./ScrollLink";
 type Props = {};
 
 const NavBar = (props: Props) => {
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="flex w-screen items-center justify-between px-9 py-5 pr-6 text-lg">
+    <div
+      className={`fixed top-0 z-50 flex w-screen items-center justify-between px-9 py-5 pr-6 text-lg ${
+        isScrolled
+          ? "bg-foreground text-background"
+          : "bg-transparent text-foreground"
+      }`}
+    >
       <Link href="/">
         <div>LOGO</div>
       </Link>

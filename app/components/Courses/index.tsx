@@ -15,7 +15,7 @@ function Courses({}: Props) {
       <p className="my-3 px-5 text-center text-xl">
         Globally recognized certification programs available for everyone.
       </p>
-      <div className="mx-auto my-12 grid w-auto max-w-7xl grid-cols-1 grid-rows-3 items-center justify-items-center px-3 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
+      <div className="mx-auto my-12 flex w-auto max-w-7xl flex-wrap justify-center px-3">
         {CoursesList.map((course) => (
           <CourseCard key={course.id} props={course} />
         ))}
