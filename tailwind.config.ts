@@ -24,6 +24,7 @@ const config = {
         headline: "#094067",
         subheadline: "#5f6c7b",
         primary: "#3da9fc",
+        secondary: "#d8eefe",
         tertiary: "#ef4565",
       },
       keyframes: {
@@ -123,6 +124,7 @@ const config = {
       fontFamily: {
         oxygen: ["var(--font-oxygen)"],
         exo: ["var(--font-exo)"],
+        nunitosans: ["var(--font-nunitosans)"],
       },
     },
   },

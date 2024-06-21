@@ -22,7 +22,7 @@ function CourseCard({ props }: Props) {
     <div
       onMouseEnter={startAnimation}
       onMouseLeave={stopAnimation}
-      className="relative m-3 flex size-96 flex-col overflow-hidden rounded-xl border bg-background p-5 text-foreground"
+      className="relative m-3 flex size-96 flex-col overflow-hidden rounded-xl border bg-background p-5 text-foreground shadow-lg transition-shadow duration-100 hover:shadow-none"
     >
       <div className="">
         <Image
@@ -51,7 +51,7 @@ function CourseCard({ props }: Props) {
         ref={scope}
         initial={{ opacity: 0 }}
         transition={{ duration: 0.4 }}
-        className="absolute left-0 top-0 z-10 flex h-full w-full flex-col justify-between rounded-xl bg-[#d8eefe] p-5"
+        className="absolute left-0 top-0 z-10 flex h-full w-full flex-col justify-between rounded-xl bg-[#d8eefe] p-5 shadow-inner"
       >
         <div>
           <p className="py-3 font-oxygen text-2xl font-semibold">

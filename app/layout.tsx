@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Inter as FontSans, Oxygen, Exo } from "next/font/google";
+import { Oxygen, Exo, Nunito } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/Navbar";
 
 import { cn } from "@/lib/utils";
 
-const fontSans = FontSans({
+const NunitoFont = Nunito({
+  weight: "400",
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-nunitosans",
 });
 
 const ExoFont = Exo({
@@ -35,8 +36,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen overflow-x-hidden scroll-smooth bg-background font-sans antialiased",
-          fontSans.variable,
+          "min-h-screen overflow-x-hidden scroll-smooth bg-background antialiased",
+          NunitoFont.variable,
           oxygen.variable,
           ExoFont.variable,
         )}
