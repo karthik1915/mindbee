@@ -11,13 +11,14 @@ import {
   SalesforcePlatformDeveloper2CourseDetails,
 } from "./CourseData";
 
-export const slugMap: Record<string, CourseDetailsProps> = {
+const slugMap: Record<string, CourseDetailsProps> = {
   "salesforce-admin": SalesforceAdminCourseDetails,
   "salesforce-app-builder": SalesforceAppBuilderCourseDetails,
   "salesforce-pd-1": SalesforcePlatformDeveloper1CourseDetails,
   "salesforce-pd-2": SalesforcePlatformDeveloper2CourseDetails,
   "salesforce-associate": SalesforceAssociate,
 };
+
 function Courses({ params }: { params: { slug: string } }) {
   const content = slugMap[params.slug];
   const otherContent = Object.keys(slugMap)

@@ -9,7 +9,22 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { slugMap } from "../page";
+import {
+  CourseDetailsProps,
+  SalesforceAdminCourseDetails,
+  SalesforceAppBuilderCourseDetails,
+  SalesforceAssociate,
+  SalesforcePlatformDeveloper1CourseDetails,
+  SalesforcePlatformDeveloper2CourseDetails,
+} from "../CourseData";
+
+export const slugMap: Record<string, CourseDetailsProps> = {
+  "salesforce-admin": SalesforceAdminCourseDetails,
+  "salesforce-app-builder": SalesforceAppBuilderCourseDetails,
+  "salesforce-pd-1": SalesforcePlatformDeveloper1CourseDetails,
+  "salesforce-pd-2": SalesforcePlatformDeveloper2CourseDetails,
+  "salesforce-associate": SalesforceAssociate,
+};
 
 type Props = {};
 
