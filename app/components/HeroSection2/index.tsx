@@ -18,16 +18,3 @@ const HerSection2 = () => {
 };
 
 export default HerSection2;
-
-{
-  /* <AnimatedGridPattern
-        numSquares={30}
-        maxOpacity={0.6}
-        duration={3}
-        repeatDelay={1}
-        className={cn(
-          "[mask-image:radial-gradient(1000px_circle_at_center,black,transparent)]",
-          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
-        )}
-      /> */
-}
