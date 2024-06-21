@@ -18,7 +18,7 @@ const primaryColor = "rgb(13 148 136)";
 
 function Footer() {
   return (
-    <div className="h-auto w-full bg-foreground px-5 pb-4 pt-10 text-background">
+    <footer className="h-auto w-full bg-foreground px-5 pb-4 pt-10 text-background">
       <div className="mb-8 grid grid-cols-2 gap-6 md:grid-cols-3 md:gap-0 lg:grid-cols-4">
         <div className="col-span-3 pl-8 md:col-span-1">
           Logo and description
@@ -86,13 +86,13 @@ function Footer() {
       <div className="my-4 px-8 text-center">
         &copy;&nbsp;2024 all rights reserved
       </div>
-    </div>
+    </footer>
   );
 }
 
 function Footer1({}: Props) {
   return (
-    <div className="mt-8 grid h-auto w-full grid-cols-2 grid-rows-2 bg-primary p-4 text-primary-foreground lg:grid-cols-4 lg:grid-rows-1">
+    <div className="text-primary-foreground mt-8 grid h-auto w-full grid-cols-2 grid-rows-2 bg-primary p-4 lg:grid-cols-4 lg:grid-rows-1">
       <div className="p-2 lg:p-4">
         <p className="mb-4 ml-4 font-oxygen text-2xl font-bold">
           Logo and Small paragraph

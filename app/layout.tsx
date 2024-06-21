@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
-import { Inter as FontSans, Oxygen } from "next/font/google";
+import { Inter as FontSans, Oxygen, Exo } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/Navbar";
 
 import { cn } from "@/lib/utils";
-import Footer from "./components/footer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const ExoFont = Exo({
+  subsets: ["latin"],
+  variable: "--font-exo",
 });
 
 const oxygen = Oxygen({
@@ -34,11 +38,12 @@ export default function RootLayout({
           "min-h-screen overflow-x-hidden scroll-smooth bg-background font-sans antialiased",
           fontSans.variable,
           oxygen.variable,
+          ExoFont.variable,
         )}
       >
         <NavBar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

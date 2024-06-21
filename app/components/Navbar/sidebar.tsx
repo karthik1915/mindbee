@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
-const Sidebar = () => {
+const Sidebar = ({ isScrolled }: { isScrolled: boolean }) => {
   const [isOpen, setIsOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
@@ -54,7 +54,11 @@ const Sidebar = () => {
   return (
     <div>
       <button onClick={toggleSidebar} className="pr-3">
-        <HamburgerMenuIcon width={24} height={24} color="black" />
+        <HamburgerMenuIcon
+          width={24}
+          height={24}
+          color={isScrolled ? "white" : "black"}
+        />
       </button>
 
       <motion.div

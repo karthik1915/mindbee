@@ -35,11 +35,9 @@ const NavBar = (props: Props) => {
   }, []);
 
   return (
-    <div
+    <nav
       className={`fixed top-0 z-50 flex w-screen items-center justify-between px-9 py-5 pr-6 text-lg ${
-        isScrolled
-          ? "bg-foreground text-background"
-          : "bg-transparent text-foreground"
+        isScrolled ? "bg-foreground text-background" : "text-foreground"
       }`}
     >
       <Link href="/">
@@ -75,9 +73,9 @@ const NavBar = (props: Props) => {
         </NavigationMenuList>
       </NavigationMenu>
       <div className="lg:hidden">
-        <Sidebar />
+        <Sidebar isScrolled={isScrolled} />
       </div>
-    </div>
+    </nav>
   );
 };
 
