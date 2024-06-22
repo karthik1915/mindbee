@@ -61,7 +61,7 @@ export const SalesforceAppBuilderCourseDetails: CourseDetailsProps = {
 
 export const SalesforceAssociate: CourseDetailsProps = {
   id: 3,
-  title: "Salesforce App Associate",
+  title: "Salesforce Associate",
   description:
     "A Salesforce Associate is an entry-level professional who supports the implementation and management of Salesforce solutions within an organization. This course covers the fundamentals of Salesforce, including navigation, data management, and basic CRM concepts. By completing this course, you will be prepared to assist with user support, data integrity, and simple customizations, providing a solid foundation for a career in Salesforce administration or development.",
   descriptionPoints: [

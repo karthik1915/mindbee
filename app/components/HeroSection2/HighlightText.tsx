@@ -18,7 +18,7 @@ export function HighlightText(text: string) {
           duration: 0.5,
           ease: [0.4, 0.0, 0.2, 1],
         }}
-        className="z-10 text-4xl font-bold leading-10 text-neutral-700 lg:text-6xl lg:leading-snug"
+        className="z-10 text-4xl font-bold leading-10 text-neutral-700 md:text-5xl lg:text-6xl lg:leading-snug"
       >
         Better Business Starts with
         <br />

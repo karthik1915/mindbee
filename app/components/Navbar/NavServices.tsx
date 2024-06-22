@@ -28,7 +28,7 @@ const NavServicesDetails: NavServiceProps[] = [
     title: "Salesforce Developer",
     description:
       "Master the skills to design, build, and deploy custom applications on the Salesforce platform.",
-    link: "/courses/salesforce-developer",
+    link: "/courses/salesforce-pd-1",
   },
   {
     id: "3",
@@ -75,7 +75,7 @@ const NavServicesCard = ({
     <ScrollLink
       href={link}
       className={cn(
-        "hover:bg-secondary flex min-h-32 cursor-pointer flex-col justify-end rounded-lg border p-2",
+        "flex min-h-32 cursor-pointer flex-col justify-end rounded-lg border p-2 hover:bg-secondary",
         className,
       )}
     >

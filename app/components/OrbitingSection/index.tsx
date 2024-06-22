@@ -49,23 +49,6 @@ export function OrbitingSection() {
           <OrbitingIcons.postman />
         </OrbitingCircles>
       </div>
-      <div>
-        <p className="mb-6 text-3xl font-bold lg:text-5xl">
-          Constantly Evolving Landscape
-        </p>
-        <div className="grid grid-cols-2 grid-rows-2 justify-center px-5 text-center md:text-left lg:px-0">
-          <p className="font-oxygen text-xl font-semibold"># Best Courses</p>
-          <div className="mb-3">
-            Best courses for salesforce online
-            <p className="cursor-pointer font-semibold underline">Learn More</p>
-          </div>
-          <p className="font-oxygen text-xl font-semibold"># Best Practices</p>
-          <div className="">
-            Best courses for salesforce online
-            <p className="cursor-pointer font-semibold underline">Learn More</p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

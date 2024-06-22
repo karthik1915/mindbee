@@ -3,6 +3,7 @@ import { courseProps } from "./courses";
 import Image from "next/image";
 import { motion, useAnimate } from "framer-motion";
 import Link from "next/link";
+import { Star } from "lucide-react";
 
 type Props = {
   props: courseProps;
@@ -39,9 +40,17 @@ function CourseCard({ props }: Props) {
         <p className="py-2 text-center font-oxygen text-xl font-semibold">
           {props.title}
         </p>
-        <div className="flex w-full items-center justify-evenly">
+        <div className="flex w-full items-end justify-evenly">
           <p>Enrollments : {props.enrollment}</p>
-          <p>{props.stars} Stars</p>
+          <div className="flex items-center">
+            <Star fill="gold" stroke="gold" size={20} />
+            <Star fill="gold" stroke="gold" size={20} />
+            <Star fill="gold" stroke="gold" size={20} />
+            <Star fill="gold" stroke="gold" size={20} />
+            <Star fill="gold" stroke="gold" size={20} />
+            &nbsp;(
+            {props.stars})
+          </div>
         </div>
         <button className="rounded-2xl py-2 font-oxygen font-semibold ring ring-primary hover:bg-primary">
           Enroll Now

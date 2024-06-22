@@ -1,4 +1,5 @@
 import React, { SVGProps } from "react";
+import Image from "next/image";
 import {
   FaceBookIcon,
   InstagramIcon,
@@ -21,7 +22,15 @@ function Footer() {
     <footer className="h-auto w-full bg-foreground px-5 pb-4 pt-10 text-background">
       <div className="mb-8 grid grid-cols-2 gap-6 md:grid-cols-3 md:gap-0 lg:grid-cols-4">
         <div className="col-span-3 pl-8 md:col-span-1">
-          Logo and description
+          <Image
+            src="/mindbee_logo_white.png"
+            alt="mindbee_logo_svg"
+            width={100}
+            height={100}
+          />
+          <p className="my-3">
+            Mindbee consulting - a salesforce coaching company
+          </p>
         </div>
         <div>
           <p className="text-center font-oxygen text-lg font-semibold">
