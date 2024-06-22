@@ -6,7 +6,7 @@ import {
   CourseDetailsProps,
   SalesforceAdminCourseDetails,
   SalesforceAppBuilderCourseDetails,
-  SalesforceAssociate,
+  SalesforceAIAssociateCourseDetails,
   SalesforcePlatformDeveloper1CourseDetails,
   SalesforcePlatformDeveloper2CourseDetails,
 } from "./CourseData";
@@ -16,7 +16,7 @@ const slugMap: Record<string, CourseDetailsProps> = {
   "salesforce-app-builder": SalesforceAppBuilderCourseDetails,
   "salesforce-pd-1": SalesforcePlatformDeveloper1CourseDetails,
   "salesforce-pd-2": SalesforcePlatformDeveloper2CourseDetails,
-  "salesforce-associate": SalesforceAssociate,
+  "salesforce-ai-associate": SalesforceAIAssociateCourseDetails,
 };
 
 function Courses({ params }: { params: { slug: string } }) {
@@ -34,7 +34,7 @@ function Courses({ params }: { params: { slug: string } }) {
         <HeroSection content={content} />
         <PieChart data={content.data} />
       </section>
-      <section id="other-courses" className="bg-secondary w-full">
+      <section id="other-courses" className="w-full bg-secondary">
         <OtherCourses contents={otherContent} />
       </section>
       <Footer />

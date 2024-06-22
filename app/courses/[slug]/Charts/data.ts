@@ -21,14 +21,14 @@ export const SalesForceAppBuilderData: courseDataType[] = [
   { x: "App Deployment", y: 10 },
 ];
 
-export const SalesforcePlatformDeveloper1: courseDataType[] = [
+export const SalesforcePlatformDeveloper1Data: courseDataType[] = [
   { x: "Process Automation and Logic", y: 30 },
   { x: "User Interface", y: 25 },
   { x: "Developer Fundamentals", y: 23 },
   { x: "Testing, Debugging, and Deployment", y: 22 },
 ];
 
-export const SalesforcePlatformDeveloper2: courseDataType[] = [
+export const SalesforcePlatformDeveloper2Data: courseDataType[] = [
   { x: "User Interface", y: 20 },
   { x: "Testing, Debugging, and Deployment", y: 20 },
   { x: "Process Automation, Logic, and Integration", y: 27 },
@@ -36,9 +36,9 @@ export const SalesforcePlatformDeveloper2: courseDataType[] = [
   { x: "Advanced Developer Fundamentals", y: 15 },
 ];
 
-export const SalesforceAssociate = [
+export const SalesforceAIAssociateData = [
   { x: "Salesforce Ecosystem", y: 32 },
   { x: "Navigation", y: 28 },
   { x: "Data Model", y: 25 },
-  { x: "Reports & Dashboards", y: 15 },
+  { x: "Reports & Dashboards", y: 15 },
 ];

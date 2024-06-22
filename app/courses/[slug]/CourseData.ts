@@ -1,9 +1,10 @@
 import {
   courseDataType,
   SalesForceAdminData,
+  SalesforceAIAssociateData,
   SalesForceAppBuilderData,
-  SalesforcePlatformDeveloper1,
-  SalesforcePlatformDeveloper2,
+  SalesforcePlatformDeveloper1Data,
+  SalesforcePlatformDeveloper2Data,
 } from "./Charts/data";
 
 export interface CourseDetailsProps {
@@ -59,9 +60,9 @@ export const SalesforceAppBuilderCourseDetails: CourseDetailsProps = {
   data: SalesForceAppBuilderData,
 };
 
-export const SalesforceAssociate: CourseDetailsProps = {
+export const SalesforceAIAssociateCourseDetails: CourseDetailsProps = {
   id: 3,
-  title: "Salesforce Associate",
+  title: "Salesforce AI Associate",
   description:
     "A Salesforce Associate is an entry-level professional who supports the implementation and management of Salesforce solutions within an organization. This course covers the fundamentals of Salesforce, including navigation, data management, and basic CRM concepts. By completing this course, you will be prepared to assist with user support, data integrity, and simple customizations, providing a solid foundation for a career in Salesforce administration or development.",
   descriptionPoints: [
@@ -73,8 +74,8 @@ export const SalesforceAssociate: CourseDetailsProps = {
   imageUrl: "/salesforce_system_architect_image.jpg",
   rating: "4.6",
   stars: "4.9",
-  link: "/courses/salesforce-associate",
-  data: SalesForceAppBuilderData,
+  link: "/courses/salesforce-AI-associate",
+  data: SalesforceAIAssociateData,
 };
 
 export const SalesforcePlatformDeveloper1CourseDetails: CourseDetailsProps = {
@@ -83,17 +84,16 @@ export const SalesforcePlatformDeveloper1CourseDetails: CourseDetailsProps = {
   description:
     "A Salesforce Platform Developer 1 specializes in building custom applications on the Salesforce platform using Apex and Visualforce. This course will equip you with the skills to develop custom business logic, create sophisticated user interfaces, and manage Salesforce data models effectively. You will also learn to optimize application performance, ensuring seamless business operations.",
   descriptionPoints: [
-    "Business Logic and Process Automation",
-    "Salesforce Fundamentals",
-    "Data Modeling and Management",
+    "Process Automation and Logic",
     "User Interface",
-    "App Deployment",
+    "Developer Fundamentals",
+    "Testing, Debugging, and Deployment",
   ],
   imageUrl: "/salesforce_platform_developer_1_image.jpg",
   rating: "4.6",
   stars: "4.9",
   link: "/courses/salesforce-pd-1",
-  data: SalesforcePlatformDeveloper1,
+  data: SalesforcePlatformDeveloper1Data,
 };
 
 export const SalesforcePlatformDeveloper2CourseDetails: CourseDetailsProps = {
@@ -102,14 +102,15 @@ export const SalesforcePlatformDeveloper2CourseDetails: CourseDetailsProps = {
   description:
     "A Salesforce Platform Developer 2 advances your expertise in complex Apex and Visualforce programming. This course focuses on integrating Salesforce with external systems, implementing advanced coding techniques, and optimizing application performance. You will gain the ability to troubleshoot and enhance Salesforce applications, ensuring they meet high-performance standards and business needs.",
   descriptionPoints: [
-    "Process Automation and Logic",
     "User Interface",
-    "Developer Fundamentals",
     "Testing, Debugging, and Deployment",
+    "Process Automation, Logic, and Integration",
+    "Performance",
+    "Advanced Developer Fundamentals",
   ],
   imageUrl: "/salesforce_platform_developer_2_image.jpg",
   rating: "4.6",
   stars: "4.9",
   link: "/courses/salesforce-pd-2",
-  data: SalesforcePlatformDeveloper2,
+  data: SalesforcePlatformDeveloper2Data,
 };

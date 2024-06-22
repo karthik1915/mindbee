@@ -10,8 +10,8 @@ const HeroSection2 = () => {
       <div className="z-10 flex items-center whitespace-pre-wrap pt-28 text-center font-oxygen font-medium text-black dark:text-white lg:text-left xl:h-[50vh] xl:pt-0">
         {HighlightText("Consultation")}
       </div>
-      <div className="relative right-0 bg-orange-100 xl:absolute xl:top-1/2 xl:block xl:size-[600px] xl:-translate-y-1/2">
-        <div className="relative mx-auto flex h-[400px] w-full max-w-6xl items-center justify-center rounded-lg bg-background xl:h-[600px]">
+      <div className="relative right-0 xl:absolute xl:top-1/2 xl:block xl:size-[600px] xl:-translate-y-1/2">
+        <div className="relative mx-auto flex size-[400px] max-w-6xl items-center justify-center rounded-lg bg-background xl:h-[600px]">
           <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
             Mindbee
           </span>

@@ -4,6 +4,16 @@ import BreadCrumbs from "./BreadCrumbs";
 
 type Props = { content: CourseDetailsProps };
 
+const listIndicatorColors: string[] = [
+  "bg-[#e74c3c]", // Red
+  "bg-[#2ecc71]", // Green
+  "bg-[#f1c40f]", // Yellow
+  "bg-[#9b59b6]", // Purple
+  "bg-[#e67e22]", // Orange
+  "bg-[#1abc9c]", // Teal
+  "bg-[#34495e]", // Dark Blue
+];
+
 const HeroSection = (props: Props) => {
   return (
     <div className="w-full lg:w-1/2">
@@ -17,7 +27,14 @@ const HeroSection = (props: Props) => {
       </p>
       <ul className="my-3 w-full list-inside list-disc space-y-2 pl-12 text-lg font-bold text-headline md:pl-16 lg:pl-20">
         {props.content.descriptionPoints.map((description, index) => {
-          return <li key={`point-${index}`}>{description}</li>;
+          return (
+            <li className="flex items-center gap-2" key={`point-${index}`}>
+              <span
+                className={`inline h-5 w-7 rounded-lg ${listIndicatorColors[index]}`}
+              ></span>{" "}
+              {description}
+            </li>
+          );
         })}
       </ul>
     </div>

@@ -23,7 +23,7 @@ export const slugMap: Record<string, CourseDetailsProps> = {
   "salesforce-app-builder": SalesforceAppBuilderCourseDetails,
   "salesforce-pd-1": SalesforcePlatformDeveloper1CourseDetails,
   "salesforce-pd-2": SalesforcePlatformDeveloper2CourseDetails,
-  "salesforce-associate": SalesforceAssociate,
+  "salesforce-ai-associate": SalesforceAssociate,
 };
 
 type Props = {};

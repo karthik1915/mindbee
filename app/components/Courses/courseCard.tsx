@@ -1,29 +1,42 @@
 "use client";
 import { courseProps } from "./courses";
 import Image from "next/image";
-import { motion, useAnimate } from "framer-motion";
+import { easeInOut, easeOut, motion, useAnimate } from "framer-motion";
 import Link from "next/link";
-import { Star } from "lucide-react";
+import { Scale, Star } from "lucide-react";
+import { OpacityIcon } from "@radix-ui/react-icons";
 
 type Props = {
   props: courseProps;
 };
 
 function CourseCard({ props }: Props) {
-  const [scope, animate] = useAnimate();
+  const [scope1, animate1] = useAnimate();
+  const [scope2, animate2] = useAnimate();
 
   const startAnimation = () => {
-    animate(scope.current, { opacity: 1 }, { duration: 0.5 });
+    animate1(scope1.current, { opacity: 1 }, { duration: 0.5 });
+    animate2(
+      scope2.current,
+      { scale: 1, opacity: 1 },
+      { duration: 0.5, ease: easeOut },
+    );
   };
+
   const stopAnimation = () => {
-    animate(scope.current, { opacity: 0 }, { duration: 0.5 });
+    animate1(scope1.current, { opacity: 0 }, { duration: 0.5 });
+    animate2(
+      scope2.current,
+      { scale: 1.1, opacity: 0 },
+      { duration: 0.3, ease: easeOut },
+    );
   };
 
   return (
     <div
       onMouseEnter={startAnimation}
       onMouseLeave={stopAnimation}
-      className="relative m-3 flex size-96 flex-col overflow-hidden rounded-xl border bg-background p-5 text-foreground shadow-lg transition-shadow duration-100 hover:shadow-none"
+      className="relative m-3 flex size-96 flex-col rounded-xl border bg-background p-5 text-foreground shadow-lg transition-shadow duration-100 hover:shadow-none"
     >
       <div className="">
         <Image
@@ -57,7 +70,7 @@ function CourseCard({ props }: Props) {
         </button>
       </div>
       <motion.div
-        ref={scope}
+        ref={scope1}
         initial={{ opacity: 0 }}
         transition={{ duration: 0.4 }}
         className="absolute left-0 top-0 z-10 flex h-full w-full flex-col justify-between rounded-xl bg-[#d8eefe] p-5 shadow-inner"
@@ -80,6 +93,23 @@ function CourseCard({ props }: Props) {
         >
           Enroll Now
         </Link>
+      </motion.div>
+      <motion.div
+        className="absolute right-0 top-0 z-40"
+        initial={{
+          scale: 1.4,
+          translateX: "33%",
+          translateY: "-33%",
+          opacity: 0,
+        }}
+        ref={scope2}
+      >
+        <Image
+          src={props.courseLogoUrl}
+          alt={`${props.title} Badge`}
+          width={100}
+          height={100}
+        />
       </motion.div>
     </div>
   );
