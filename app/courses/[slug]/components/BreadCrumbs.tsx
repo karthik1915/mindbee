@@ -12,8 +12,8 @@ import {
 import {
   CourseDetailsProps,
   SalesforceAdminCourseDetails,
+  SalesforceAIAssociateCourseDetails,
   SalesforceAppBuilderCourseDetails,
-  SalesforceAssociate,
   SalesforcePlatformDeveloper1CourseDetails,
   SalesforcePlatformDeveloper2CourseDetails,
 } from "../CourseData";
@@ -23,7 +23,7 @@ export const slugMap: Record<string, CourseDetailsProps> = {
   "salesforce-app-builder": SalesforceAppBuilderCourseDetails,
   "salesforce-pd-1": SalesforcePlatformDeveloper1CourseDetails,
   "salesforce-pd-2": SalesforcePlatformDeveloper2CourseDetails,
-  "salesforce-ai-associate": SalesforceAssociate,
+  "salesforce-ai-associate": SalesforceAIAssociateCourseDetails,
 };
 
 type Props = {};
