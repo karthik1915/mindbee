@@ -22,6 +22,7 @@ const config = {
         background: "#fffffe",
         foreground: "#16161a",
         headline: "#094067",
+        navbar: "#011133",
         subheadline: "#5f6c7b",
         primary: "#3da9fc",
         secondary: "#d8eefe",

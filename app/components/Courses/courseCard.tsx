@@ -98,8 +98,8 @@ function CourseCard({ props }: Props) {
         className="absolute right-0 top-0 z-40"
         initial={{
           scale: 1.4,
-          translateX: "33%",
-          translateY: "-33%",
+          // translateX: "33%",
+          // translateY: "-33%",
           opacity: 0,
         }}
         ref={scope2}

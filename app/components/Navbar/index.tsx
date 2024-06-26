@@ -17,12 +17,12 @@ type Props = {};
 
 const NavBar = (props: Props) => {
   return (
-    <nav className="fixed top-0 z-50 flex w-screen items-center justify-between bg-foreground px-9 py-4 pr-6 text-lg text-background">
+    <nav className="bg-navbar fixed top-0 z-50 flex w-screen items-center justify-between px-9 py-4 pr-6 text-lg text-background">
       <Link href="/">
         <Image
-          src="/mindbee_logo_white.png"
+          src="/mindbee_logo_square.png"
           alt="mindbee_logo_svg"
-          width={100}
+          width={200}
           height={100}
         />
       </Link>
