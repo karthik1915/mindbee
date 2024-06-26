@@ -12,6 +12,7 @@ import {
 } from "@/app/components/icons/icons";
 import { Details } from "./details";
 import Link from "next/link";
+import ScrollLink from "../Navbar/ScrollLink";
 
 type Props = {};
 
@@ -43,10 +44,10 @@ function Footer() {
             <Link className="my-2 block" href="/">
               About
             </Link>
-            <Link className="my-2 block" href="/">
-              Services
+            <Link className="my-2 block" href="/courses/salesforce-admin">
+              Courses
             </Link>
-            <Link className="my-2 block" href="/">
+            <Link className="my-2 block" href="/blogs">
               Blogs
             </Link>
           </div>

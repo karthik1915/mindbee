@@ -53,7 +53,9 @@ function PieChart({ data }: Props) {
       className="relative h-72 w-full md:h-80 md:w-1/2 lg:h-96"
     >
       <VictoryPie
-        containerComponent={<VictoryContainer className="touch-none" />}
+        containerComponent={
+          <VictoryContainer style={{ touchAction: "auto" }} />
+        }
         data={data}
         animate={{
           duration: 1000,

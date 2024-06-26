@@ -12,12 +12,12 @@ function FAQSection({}: Props) {
   return (
     <section className="relative mx-auto my-12 flex w-full max-w-6xl flex-col items-center px-4 lg:flex-row">
       <div className="w-full flex-grow px-3 py-10 lg:py-0">
-        <p className="text-center font-exo text-4xl font-semibold text-headline lg:text-left">
+        <h1 className="text-center font-exo text-4xl font-semibold lg:text-left">
           Frequently asked questions
-        </p>
-        <p className="text-center font-oxygen text-xl text-subheadline lg:text-left">
+        </h1>
+        <h3 className="text-center font-oxygen text-xl lg:text-left">
           Got Questions? We&apos;ve Got Answers!
-        </p>
+        </h3>
         <Accordion type="single" collapsible className="w-full py-3 lg:w-3/4">
           <AccordionItem value="item-1">
             <AccordionTrigger>Why should I learn Salesforce?</AccordionTrigger>

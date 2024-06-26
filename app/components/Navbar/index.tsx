@@ -50,9 +50,9 @@ const NavBar = (props: Props) => {
               <div>here</div>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          <Link className="px-2 py-1 text-xl" href="/#about">
+          <ScrollLink className="px-2 py-1 text-xl" href="/#contact">
             Contact
-          </Link>
+          </ScrollLink>
         </NavigationMenuList>
       </NavigationMenu>
       <div className="lg:hidden">
