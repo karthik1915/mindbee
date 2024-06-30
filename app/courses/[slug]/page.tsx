@@ -10,6 +10,7 @@ import {
   SalesforcePlatformDeveloper1CourseDetails,
   SalesforcePlatformDeveloper2CourseDetails,
 } from "./CourseData";
+import KeyHighlights from "./components/KeyHighLight";
 
 const slugMap: Record<string, CourseDetailsProps> = {
   "salesforce-admin": SalesforceAdminCourseDetails,
@@ -34,6 +35,7 @@ function Courses({ params }: { params: { slug: string } }) {
         <HeroSection content={content} />
         <PieChart data={content.data} />
       </section>
+      <KeyHighlights />
       <section id="other-courses" className="w-full bg-secondary">
         <OtherCourses contents={otherContent} />
       </section>
