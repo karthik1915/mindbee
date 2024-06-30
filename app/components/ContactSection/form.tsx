@@ -4,40 +4,36 @@ type Props = {};
 
 const ContactForm = (props: Props) => {
   return (
-    <form className="flex h-full flex-grow flex-col gap-6 p-4">
-      <div className="flex flex-col gap-1">
-        <label>Name :</label>
+    <form className="grid gap-x-4 gap-y-8 p-4 md:grid-cols-2">
+      <div className="col-span-2 flex flex-col justify-between gap-1 space-y-2 md:col-span-1">
         <input
-          className="rounded-xl px-4 py-2"
+          className="rounded-xl bg-secondary px-4 py-2"
           type="text"
           placeholder="Name"
         />
-      </div>
-      <div className="flex flex-col gap-1">
-        <label>Email :</label>
         <input
-          className="rounded-xl px-4 py-2"
+          className="rounded-xl bg-secondary px-4 py-2"
           type="email"
           placeholder="Email"
         />
-      </div>
-      <div className="flex flex-col gap-1">
-        <label>Mobile Number :</label>
         <input
-          className="rounded-xl px-4 py-2"
-          type="number"
+          className="rounded-xl bg-secondary px-4 py-2"
+          type="tel"
           placeholder="Mobile"
         />
       </div>
-      <div className="flex flex-col gap-1">
-        <label>Message :</label>
-        <textarea className="rounded-xl px-4 py-2" placeholder="Message" />
+      <div className="col-span-2 flex flex-col gap-1 md:col-span-1">
+        <textarea
+          className="h-full min-h-28 w-full rounded-xl bg-secondary px-4 py-2"
+          placeholder="Message"
+        />
       </div>
+
       <button
-        className="w-full rounded-xl bg-headline py-3 text-white transition-colors duration-200 hover:bg-teal-800"
+        className="col-span-2 mx-auto w-44 rounded-xl bg-headline py-2 text-white transition-colors duration-200 hover:bg-teal-800"
         type="submit"
       >
-        Send
+        Send Message
       </button>
     </form>
   );

@@ -20,9 +20,9 @@ const primaryColor = "rgb(13 148 136)";
 
 function Footer() {
   return (
-    <footer className="bg-navbar h-auto w-full px-5 pb-4 pt-10 text-background">
-      <div className="mb-8 grid grid-cols-2 gap-6 md:grid-cols-3 md:gap-0 lg:grid-cols-4">
-        <div className="col-span-3 pl-8 md:col-span-1">
+    <footer className="h-auto w-full bg-navbar px-5 pb-4 pt-10 text-background">
+      <div className="mb-8 grid grid-cols-2 gap-y-8 md:grid-cols-3 lg:grid-cols-4">
+        <div className="col-span-3 pl-8 lg:col-span-1">
           <Image
             src="/mindbee_logo_square.png"
             alt="mindbee_logo_svg"
@@ -34,7 +34,7 @@ function Footer() {
           </p>
         </div>
         <div>
-          <p className="text-center font-oxygen text-lg font-semibold">
+          <p className="text-center font-oxygen text-xl font-semibold">
             Company
           </p>
           <div className="text-center">
@@ -53,7 +53,7 @@ function Footer() {
           </div>
         </div>
         <div>
-          <p className="text-center font-oxygen text-lg font-semibold">
+          <p className="text-center font-oxygen text-xl font-semibold">
             Support
           </p>
           <div className="text-center">
@@ -72,7 +72,7 @@ function Footer() {
             </Link>
           </div>
         </div>
-        <div className="col-span-3 pl-8 lg:col-span-1">
+        <div className="col-span-2 pl-8 md:col-span-1">
           <p className="mb-4 font-oxygen text-2xl font-bold lg:ml-4">
             Get in touch
           </p>
