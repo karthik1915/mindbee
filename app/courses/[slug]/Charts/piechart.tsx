@@ -1,12 +1,8 @@
 "use client";
-import { FollowerPointerCard } from "@/components/ui/following-pointer";
 import React, { useState } from "react";
-import {
-  VictoryContainer,
-  VictoryLegend,
-  VictoryPie,
-  VictoryThemeDefinition,
-} from "victory";
+import Image from "next/image";
+import { FollowerPointerCard } from "@/components/ui/following-pointer";
+import { VictoryContainer, VictoryPie, VictoryThemeDefinition } from "victory";
 
 const chartColors: string[] = [
   "#e74c3c", // Red
@@ -20,6 +16,7 @@ const chartColors: string[] = [
 
 type Props = {
   data: { x: string; y: number }[];
+  badge: string;
 };
 
 const customTheme: VictoryThemeDefinition = {
@@ -43,7 +40,7 @@ const formatLabel = (text: string) => {
   return formattedText.trim();
 };
 
-function PieChart({ data }: Props) {
+function PieChart({ data, badge }: Props) {
   const [currentTitle, setCurrentTitle] = useState<string>("Course Details");
   const [currentColor, setCurrentColor] = useState<string>("#095AF1");
 
@@ -52,6 +49,9 @@ function PieChart({ data }: Props) {
       title={<TitleComponent title={currentTitle} color={currentColor} />}
       className="relative h-72 w-full md:h-80 md:w-1/2 lg:h-96"
     >
+      <div className="absolute left-1/2 top-1/2 z-10 size-24 -translate-x-1/2 -translate-y-1/2">
+        <Image src={badge} alt="course badge" width={96} height={96} />
+      </div>
       <VictoryPie
         containerComponent={
           <VictoryContainer style={{ touchAction: "auto" }} />
@@ -65,6 +65,7 @@ function PieChart({ data }: Props) {
         style={{ labels: { fontSize: 12 } }}
         theme={customTheme}
         labels={({ datum }) => ""}
+        innerRadius={80}
         events={[
           {
             target: "data",

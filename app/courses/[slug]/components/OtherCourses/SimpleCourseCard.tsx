@@ -16,8 +16,8 @@ const SimpleCourseCard = ({ content }: Props) => {
       <Image
         src={content.imageUrl}
         alt={content.title}
-        width={320}
-        height={300}
+        width={270}
+        height={168}
         style={{}}
         className="rounded-t-2xl"
       />

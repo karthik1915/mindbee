@@ -38,16 +38,22 @@ function Footer() {
             Company
           </p>
           <div className="text-center">
-            <Link className="my-2 block" href="/">
+            <Link className="my-2 block underline underline-offset-4" href="/">
               Home
             </Link>
-            <Link className="my-2 block" href="/">
+            <Link className="my-2 block underline underline-offset-4" href="/">
               About
             </Link>
-            <Link className="my-2 block" href="/courses/salesforce-admin">
+            <Link
+              className="my-2 block underline underline-offset-4"
+              href="/courses/salesforce-admin"
+            >
               Courses
             </Link>
-            <Link className="my-2 block" href="/blogs">
+            <Link
+              className="my-2 block underline underline-offset-4"
+              href="/blogs"
+            >
               Blogs
             </Link>
           </div>
@@ -57,17 +63,17 @@ function Footer() {
             Support
           </p>
           <div className="text-center">
-            <Link className="my-2 block" href="/">
+            <Link className="my-2 block underline underline-offset-4" href="/">
               Rules & privacy
             </Link>
 
-            <Link className="my-2 block" href="/">
+            <Link className="my-2 block underline underline-offset-4" href="/">
               Refund Policy
             </Link>
-            <Link className="my-2 block" href="/">
+            <Link className="my-2 block underline underline-offset-4" href="/">
               Contact Us
             </Link>
-            <Link className="my-2 block" href="/">
+            <Link className="my-2 block underline underline-offset-4" href="/">
               Programs
             </Link>
           </div>
@@ -87,7 +93,7 @@ function Footer() {
             </div>
             <div className="flex items-center">
               <MailIcon fill={primaryColor} />
-              <span className="ml-1">{Details.address}</span>
+              <span className="ml-1">{Details.mail}</span>
             </div>
           </div>
         </div>

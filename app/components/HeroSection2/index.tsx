@@ -6,9 +6,9 @@ import { OrbitingIcons } from "../icons/orbitingIcons";
 
 const HeroSection2 = () => {
   return (
-    <div className="relative flex min-h-[80vh] w-full flex-col items-center overflow-hidden bg-background p-10 pt-28 md:min-h-[50vh] lg:p-16 xl:flex-row xl:py-28">
-      <div className="z-10 flex items-center whitespace-pre-wrap pt-28 text-center font-oxygen font-medium text-black dark:text-white lg:text-left xl:h-[50vh] xl:pt-0">
-        {HighlightText("Consultation")}
+    <div className="relative flex min-h-[80vh] w-full flex-col items-center overflow-hidden bg-background pt-28 md:min-h-[50vh] md:p-10 lg:p-16 xl:flex-row xl:py-28">
+      <div className="z-10 flex items-center whitespace-pre-wrap pt-8 text-center font-oxygen font-medium text-black dark:text-white md:pt-20 lg:text-left xl:h-[50vh] xl:pt-0">
+        <HighlightText text="Consultation" />
       </div>
       <div className="relative right-0 xl:absolute xl:top-1/2 xl:block xl:size-[520px] xl:-translate-y-1/2">
         <div className="relative mx-auto flex size-[400px] max-w-6xl items-center justify-center rounded-lg bg-background xl:h-[600px]">

@@ -12,7 +12,7 @@ function WhatWeDoSection({}: Props) {
           <br />
           Technologies We Support
         </h1>
-        <div className="mx-auto min-h-[400px] w-1/3 min-w-[380px] rounded-xl bg-primary p-2 md:min-w-[440px]">
+        <div className="mx-auto min-h-[400px] w-1/3 min-w-[340px] rounded-xl bg-primary p-2 md:min-w-[440px]">
           {CloudTech.map((point) => {
             return (
               <div key={point} className="border-b px-4 py-3 text-white">
@@ -28,7 +28,7 @@ function WhatWeDoSection({}: Props) {
           <br />
           Empower with Salesforce
         </h1>
-        <div className="mx-auto min-h-[400px] w-1/3 min-w-[380px] rounded-xl bg-primary p-2 md:min-w-[440px]">
+        <div className="mx-auto min-h-[400px] w-1/3 min-w-[340px] rounded-xl bg-primary p-2 md:min-w-[440px]">
           {Industries.map((point) => {
             return (
               <div key={point} className="border-b px-4 py-3 text-white">

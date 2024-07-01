@@ -16,6 +16,7 @@ export interface CourseDetailsProps {
   stars: string;
   rating: string;
   link: string;
+  badgeUrl: string;
   data: courseDataType[];
 }
 
@@ -36,7 +37,7 @@ export const SalesforceAdminCourseDetails: CourseDetailsProps = {
   imageUrl: "/salesforce_admin_image.jpg",
   rating: "4.6",
   stars: "4.9",
-
+  badgeUrl: "/badges/salesforce_admin_badge.png",
   link: "/courses/salesforce-admin",
   data: SalesForceAdminData,
 };
@@ -57,6 +58,7 @@ export const SalesforceAppBuilderCourseDetails: CourseDetailsProps = {
   rating: "4.6",
   stars: "4.9",
   link: "/courses/salesforce-app-builder",
+  badgeUrl: "/badges/salesforce_app_builder_badge.png",
   data: SalesForceAppBuilderData,
 };
 
@@ -74,7 +76,8 @@ export const SalesforceAIAssociateCourseDetails: CourseDetailsProps = {
   imageUrl: "/salesforce_system_architect_image.jpg",
   rating: "4.6",
   stars: "4.9",
-  link: "/courses/salesforce-AI-associate",
+  badgeUrl: "/badges/salesforce_ai_associate_badge.png",
+  link: "/courses/salesforce-ai-associate",
   data: SalesforceAIAssociateData,
 };
 
@@ -93,6 +96,7 @@ export const SalesforcePlatformDeveloper1CourseDetails: CourseDetailsProps = {
   rating: "4.6",
   stars: "4.9",
   link: "/courses/salesforce-pd-1",
+  badgeUrl: "/badges/salesforce_pd_1_badge.png",
   data: SalesforcePlatformDeveloper1Data,
 };
 
@@ -112,5 +116,6 @@ export const SalesforcePlatformDeveloper2CourseDetails: CourseDetailsProps = {
   rating: "4.6",
   stars: "4.9",
   link: "/courses/salesforce-pd-2",
+  badgeUrl: "/badges/salesforce_pd_2_badge.png",
   data: SalesforcePlatformDeveloper2Data,
 };

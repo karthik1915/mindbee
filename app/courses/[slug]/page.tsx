@@ -11,6 +11,7 @@ import {
   SalesforcePlatformDeveloper2CourseDetails,
 } from "./CourseData";
 import KeyHighlights from "./components/KeyHighLight";
+import CourseRegForm from "./components/CourseForm";
 
 const slugMap: Record<string, CourseDetailsProps> = {
   "salesforce-admin": SalesforceAdminCourseDetails,
@@ -33,9 +34,10 @@ function Courses({ params }: { params: { slug: string } }) {
         className="mx-auto my-10 flex w-full max-w-screen-2xl flex-col items-center lg:flex-row"
       >
         <HeroSection content={content} />
-        <PieChart data={content.data} />
+        <PieChart data={content.data} badge={content.badgeUrl} />
       </section>
       <KeyHighlights />
+      <CourseRegForm />
       <section id="other-courses" className="w-full bg-secondary">
         <OtherCourses contents={otherContent} />
       </section>

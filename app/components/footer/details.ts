@@ -5,7 +5,7 @@ interface DetailProps {
 }
 
 export const Details: DetailProps = {
-  address: "123, 1st Street, New York",
-  number: "+1234567890",
-  mail: "hello@awesomemail.com",
+  address: "Seshangur ,Villupuram ,Tamilnadu-605501",
+  number: "+91 8825640296 ",
+  mail: "mindbeeesconsulting@gmail.com",
 };

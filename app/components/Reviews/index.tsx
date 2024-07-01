@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
 import {
@@ -7,7 +6,6 @@ import {
   DialogTitle,
   DialogContent,
   DialogTrigger,
-  DialogDescription,
   DialogHeader,
 } from "@/components/ui/dialog";
 import DialogForm from "./DialogForm";
@@ -15,40 +13,34 @@ type Props = {};
 
 const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "/background_sf.jpg",
+    name: "Sathish",
+    username: "@sathish3602",
+    body: "Salesforce is future, I am Really happy that i learned awesome courses here from Mindbee.",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "/background_sf.jpg",
+    name: "Monika",
+    username: "@monz",
+    body: "I had no Knowledge about salesforce before, Thanks for this Coaching now i got more Idea about my Carrier.",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "/background_sf.jpg",
+    name: "Nandhakumar",
+    username: "@nandhurock",
+    body: "Best Salesforce Coaching so far, Glad that I Kickstart my Learning Journey here",
   },
   {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "/background_sf.jpg",
+    name: "Kavipriya",
+    username: "@kavi",
+    body: "They reached me right after i requested enquiry. Thanks for the Brief Eloboration.",
   },
   {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "/background_sf.jpg",
+    name: "Ravichandran",
+    username: "@r_ravi",
+    body: "Love the Curriculam and teaching technique, They are simply great.",
   },
   {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "/background_sf.jpg",
+    name: "Harish",
+    username: "@harish_0",
+    body: "This site is awesome and courses are very Engaging and Intresting.",
   },
 ];
 
@@ -100,12 +92,10 @@ function Reviews({}: Props) {
 }
 
 const ReviewCard = ({
-  img,
   name,
   username,
   body,
 }: {
-  img: string;
   name: string;
   username: string;
   body: string;
@@ -118,15 +108,8 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <Image
-          src={img}
-          alt="avatar"
-          className="rounded-full"
-          width={32}
-          height={32}
-        />
         <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
+          <figcaption className="text-sm font-bold dark:text-white">
             {name}
           </figcaption>
           <p className="text-xs font-medium dark:text-white/40">{username}</p>

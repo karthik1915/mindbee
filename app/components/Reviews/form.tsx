@@ -8,6 +8,8 @@ const ReviewForm = (props: Props) => {
       <div className="flex flex-col gap-1">
         <label className="py-2 text-lg">Name :</label>
         <input
+          required
+          aria-required
           className="rounded-xl px-4 py-2 ring"
           type="text"
           placeholder="Name"
@@ -16,6 +18,8 @@ const ReviewForm = (props: Props) => {
       <div className="mt-4 flex flex-col">
         <label className="py-3 text-lg">Review :</label>
         <textarea
+          required
+          aria-required
           rows={3}
           className="rounded-xl px-4 py-2 ring"
           placeholder="Your Review"

@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import Image from "next/image";
 
 const Sidebar = ({ isScrolled }: { isScrolled: boolean }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +54,13 @@ const Sidebar = ({ isScrolled }: { isScrolled: boolean }) => {
 
   return (
     <div>
-      <button onClick={toggleSidebar} className="pr-3">
+      <button
+        onClick={toggleSidebar}
+        title="menubar"
+        type="button"
+        role="button"
+        className="pr-3"
+      >
         <HamburgerMenuIcon
           width={24}
           height={24}
@@ -66,11 +73,17 @@ const Sidebar = ({ isScrolled }: { isScrolled: boolean }) => {
         initial={{ x: "-100%" }}
         animate={{ x: isOpen ? 0 : "-100%" }}
         transition={{ type: "tween", duration: 0.3 }}
-        className="fixed left-0 top-0 z-50 h-full w-[70vw] bg-gray-800 text-white shadow-lg"
+        className="fixed left-0 top-0 z-10 h-full w-[70vw] bg-navbar text-white shadow-lg"
       >
-        <h2 className="mb-4 py-5 text-center text-2xl font-semibold">
-          Mind Bee
-        </h2>
+        <div className="">
+          <Image
+            className="mx-auto py-9"
+            src="/mindbee_logo_square.png"
+            alt="mindbee_logo_svg"
+            width={200}
+            height={56}
+          />
+        </div>
         <div className="flex flex-col items-center gap-5 p-4 text-xl">
           <Link href="/" onClick={(e) => handleLinkClick(e, "/")}>
             Home
