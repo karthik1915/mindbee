@@ -46,10 +46,15 @@ function PieChart({ data, badge }: Props) {
 
   return (
     <FollowerPointerCard
+      aria-hidden
       title={<TitleComponent title={currentTitle} color={currentColor} />}
       className="relative h-72 w-full md:h-80 md:w-1/2 lg:h-96"
     >
-      <div className="absolute left-1/2 top-1/2 z-10 size-24 -translate-x-1/2 -translate-y-1/2">
+      <div
+        onMouseEnter={() => setCurrentTitle("Achievement Badge")}
+        onMouseLeave={() => setCurrentTitle("Course Details")}
+        className="absolute left-1/2 top-1/2 z-10 size-24 -translate-x-1/2 -translate-y-1/2"
+      >
         <Image src={badge} alt="course badge" width={96} height={96} />
       </div>
       <VictoryPie

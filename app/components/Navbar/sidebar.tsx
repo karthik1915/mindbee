@@ -30,7 +30,7 @@ const Sidebar = ({ isScrolled }: { isScrolled: boolean }) => {
     event.preventDefault();
     setIsOpen(false);
 
-    if (href.startsWith("/#")) {
+    if (href.startsWith("#")) {
       const targetId = href.slice(2);
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
@@ -95,7 +95,7 @@ const Sidebar = ({ isScrolled }: { isScrolled: boolean }) => {
             href="/#services"
             onClick={(e) => handleLinkClick(e, "/#services")}
           >
-            Courses
+            courses
           </Link>
           <Link href="/blogs" onClick={(e) => handleLinkClick(e, "/blogs")}>
             Blogs

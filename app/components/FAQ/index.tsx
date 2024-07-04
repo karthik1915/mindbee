@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordian";
+
 type Props = {};
 
 function FAQSection({}: Props) {
@@ -15,13 +16,18 @@ function FAQSection({}: Props) {
         <h1 className="text-center font-exo text-4xl font-semibold lg:text-left">
           Frequently asked questions
         </h1>
-        <h3 className="text-center font-oxygen text-xl lg:text-left">
+        <h2 className="text-center font-oxygen text-xl lg:text-left">
           Got Questions? We&apos;ve Got Answers!
-        </h3>
+        </h2>
         <Accordion type="single" collapsible className="w-full py-3 lg:w-3/4">
           <AccordionItem value="item-1">
-            <AccordionTrigger>Why should I learn Salesforce?</AccordionTrigger>
-            <AccordionContent>
+            <AccordionTrigger
+              aria-expanded="false"
+              aria-controls="item-1-content"
+            >
+              Why should I learn Salesforce?
+            </AccordionTrigger>
+            <AccordionContent id="item-1-content">
               Salesforce is a leading customer relationship management (CRM)
               platform that enables businesses to manage their customer data,
               sales processes, and marketing efforts efficiently. Learning
@@ -31,8 +37,13 @@ function FAQSection({}: Props) {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger>How Valuable these courses are?</AccordionTrigger>
-            <AccordionContent>
+            <AccordionTrigger
+              aria-expanded="false"
+              aria-controls="item-2-content"
+            >
+              How valuable are these courses?
+            </AccordionTrigger>
+            <AccordionContent id="item-2-content">
               We offer a range of courses tailored to different levels of
               expertise, including Salesforce Administrator, Salesforce
               Developer, Salesforce Consultant, and specialized courses for
@@ -42,10 +53,13 @@ function FAQSection({}: Props) {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger>
+            <AccordionTrigger
+              aria-expanded="false"
+              aria-controls="item-3-content"
+            >
               Do I need any prior experience for this?
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent id="item-3-content">
               No prior experience is required for our introductory courses.
               However, for advanced courses, some basic understanding of
               Salesforce or general IT concepts might be beneficial. We

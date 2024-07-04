@@ -9,7 +9,10 @@
   h1{
     @apply text-headline;
   }
-  h3 {
+  h2 {
     @apply text-subheadline;
+  }
+  ::selection{
+    @apply bg-primary text-foreground;
   }
 }

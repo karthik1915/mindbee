@@ -2,7 +2,7 @@ import ContactSection from "./components/ContactSection";
 import Courses from "./components/Courses";
 import FAQSection from "./components/FAQ";
 import Footer from "./components/footer";
-import HeroSection2 from "./components/HeroSection2";
+import HeroSection from "./components/HeroSection";
 import Reviews from "./components/Reviews";
 import StepsSection from "./components/StepsSection";
 import WhatWeDoSection from "./components/WhatWeDoSection";
@@ -10,7 +10,7 @@ import WhatWeDoSection from "./components/WhatWeDoSection";
 export default function Home() {
   return (
     <>
-      <HeroSection2 />
+      <HeroSection />
       <Courses />
       <StepsSection />
       <WhatWeDoSection />

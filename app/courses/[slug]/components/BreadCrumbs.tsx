@@ -30,7 +30,7 @@ type Props = {};
 
 const BreadCrumbs = (props: Props) => {
   return (
-    <div className="flex items-center px-5 pb-4">
+    <nav role="bread crumbs" className="flex items-center px-5 pb-4">
       <Link href="/">Home</Link>
       <ChevronRight className="inline" size={20} />
       <Link href="/#courses" className="inline">
@@ -38,7 +38,7 @@ const BreadCrumbs = (props: Props) => {
       </Link>
       <ChevronRight className="inline" size={20} />
       <DropdownNavMenu />
-    </div>
+    </nav>
   );
 };
 

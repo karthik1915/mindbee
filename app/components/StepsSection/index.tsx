@@ -30,7 +30,7 @@ const Circle = forwardRef<
         {children}
       </div>
       <div className="w-48 space-y-3">
-        <p className="text-center font-oxygen text-xl">{title}</p>
+        <h3 className="text-center font-oxygen text-xl">{title}</h3>
         <p className="break-words text-lg">{description}</p>
       </div>
     </div>
@@ -60,6 +60,8 @@ function StepsSection({}: Props) {
             description="Enroll Our Salesfoce course by easy enquiry with us"
           >
             <Image
+              aria-hidden
+              role="presentation"
               src="/steps/enrollment.png"
               alt="Enrollment"
               width={96}
@@ -72,6 +74,8 @@ function StepsSection({}: Props) {
             description="Learn your structured, expert-led lessons to master Salesforce skills"
           >
             <Image
+              role="presentation"
+              aria-hidden
               src="/steps/training.png"
               alt="Enrollment"
               width={96}
@@ -84,6 +88,8 @@ function StepsSection({}: Props) {
             description="Validate your knowledge and readiness with rigorous assessments and exams."
           >
             <Image
+              role="presentation"
+              aria-hidden
               src="/steps/exam.png"
               alt="Enrollment"
               width={96}
@@ -96,6 +102,8 @@ function StepsSection({}: Props) {
             description="Earn your official Salesforce certification to showcase your expertise and boost your career."
           >
             <Image
+              role="presentation"
+              aria-hidden
               src="/steps/certification.png"
               alt="Enrollment"
               width={96}
@@ -106,18 +114,21 @@ function StepsSection({}: Props) {
       </div>
 
       <AnimatedBeam
+        aria-hidden
         containerRef={containerRef}
         fromRef={div1Ref}
         duration={3}
         toRef={div2Ref}
       />
       <AnimatedBeam
+        aria-hidden
         containerRef={containerRef}
         fromRef={div2Ref}
         duration={3}
         toRef={div3Ref}
       />
       <AnimatedBeam
+        aria-hidden
         duration={3}
         containerRef={containerRef}
         fromRef={div3Ref}

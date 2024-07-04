@@ -25,7 +25,7 @@ const ScrollLink = ({ href, children, className }: ScrollLinkProps) => {
   };
 
   return (
-    <Link href={href} className={className} onClick={handleClick}>
+    <Link href={href} role="link" className={className} onClick={handleClick}>
       {children}
     </Link>
   );

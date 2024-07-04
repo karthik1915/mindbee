@@ -42,12 +42,15 @@ const NavServicesDetails: NavServiceProps[] = [
 const NavServices = () => {
   return (
     <>
-      <NavigationMenuTrigger className="font-semibold">
+      <NavigationMenuTrigger className="font-semibold" tabIndex={-1}>
         <ScrollLink className="text-xl" href="/#services">
           Courses
         </ScrollLink>
       </NavigationMenuTrigger>
-      <NavigationMenuContent className="grid gap-3 p-6 lg:w-[500px] lg:grid-cols-[1fr_.75fr]">
+      <NavigationMenuContent
+        aria-hidden
+        className="grid gap-3 p-6 lg:w-[500px] lg:grid-cols-[1fr_.75fr]"
+      >
         {NavServicesDetails.map((service) => {
           return (
             <NavServicesCard

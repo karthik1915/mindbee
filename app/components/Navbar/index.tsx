@@ -17,7 +17,11 @@ type Props = {};
 
 const NavBar = (props: Props) => {
   return (
-    <nav className="fixed top-0 z-50 flex w-screen items-center justify-between bg-navbar px-9 py-4 pr-6 text-lg text-background">
+    <section
+      role="navigation"
+      aria-label="Main navigation menu"
+      className="fixed top-0 z-50 flex w-screen items-center justify-between bg-navbar px-9 py-4 pr-6 text-lg text-background"
+    >
       <Link href="/">
         <Image
           src="/mindbee_logo_square.png"
@@ -26,11 +30,18 @@ const NavBar = (props: Props) => {
           height={56}
         />
       </Link>
-      <NavigationMenu className="hidden gap-5 font-semibold lg:flex">
+      <NavigationMenu
+        aria-label="navigation links"
+        className="hidden gap-5 font-semibold lg:flex"
+      >
         <Link className="px-2 py-1 text-xl" href="/">
           Home
         </Link>
-        <ScrollLink href="/#about" className="px-2 py-1 text-xl">
+        <ScrollLink
+          aria-label="About us"
+          href="/#about"
+          className="px-2 py-1 text-xl"
+        >
           About
         </ScrollLink>
         <NavigationMenuList>
@@ -38,19 +49,26 @@ const NavBar = (props: Props) => {
             <NavServices />
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>
-              <Link className="text-xl" href="/blogs">
+            <NavigationMenuTrigger tabIndex={-1}>
+              <Link aria-label="Our Blogs" className="text-xl" href="/blogs">
                 Blogs
               </Link>
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+            <NavigationMenuContent
+              aria-hidden
+              className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]"
+            >
               <div>Recent / Custom</div>
               <div>set blogs</div>
               <div>are recommended</div>
               <div>here</div>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          <ScrollLink className="px-2 py-1 text-xl" href="/#contact">
+          <ScrollLink
+            aria-label="Contact us"
+            className="px-2 py-1 text-xl"
+            href="/#contact"
+          >
             Contact
           </ScrollLink>
         </NavigationMenuList>
@@ -58,7 +76,7 @@ const NavBar = (props: Props) => {
       <div className="lg:hidden">
         <Sidebar isScrolled={true} />
       </div>
-    </nav>
+    </section>
   );
 };
 

@@ -5,11 +5,11 @@ export const CloudTech: string[] = [
   "Health Cloud",
   "Financial Services Cloud",
   "Education Cloud",
-  "NonProfit Cloud",
+  "Non-Profit Cloud",
 ];
 
 export const Industries: string[] = [
-  "Healthcare,Pharma and Life Sciences",
+  "Healthcare, Pharma and Life Sciences",
   "Financial Services & Insurance",
   "Tech Industry",
   "Education Sector",
