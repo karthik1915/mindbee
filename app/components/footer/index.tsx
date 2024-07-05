@@ -7,12 +7,14 @@ import {
   PhoneIcon,
 } from "@/app/components/icons/icons";
 import { Details } from "./details";
+import DotPattern from "@/components/magicui/dot-pattern";
+import { cn } from "@/lib/utils";
 
 const primaryColor = "rgb(13 148 136)";
 
 function Footer() {
   return (
-    <footer className="h-auto w-full bg-navbar px-5 pb-4 pt-10 text-background">
+    <footer className="relative h-auto w-full bg-navbar px-5 pb-4 pt-10 text-background">
       <div className="mb-8 grid grid-cols-2 gap-y-8 md:grid-cols-3 lg:grid-cols-4">
         {/* Company Information Section */}
         <div className="col-span-3 pl-8 lg:col-span-1">
@@ -73,6 +75,11 @@ function Footer() {
       <div className="my-4 px-8 text-center">
         &copy;&nbsp;2024 all rights reserved
       </div>
+      <DotPattern
+        className={cn(
+          "[mask-image:linear-gradient(135deg,white,transparent_70%)]",
+        )}
+      />
     </footer>
   );
 }

@@ -108,6 +108,10 @@ const config = {
             transform: "translateY(-50%)",
           },
         },
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
       },
       animation: {
         shimmer: "shimmer 8s infinite",
@@ -122,6 +126,7 @@ const config = {
         third: "moveInCircle 40s linear infinite",
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
+        grid: "grid 15s linear infinite",
       },
       fontFamily: {
         oxygen: ["var(--font-oxygen)"],

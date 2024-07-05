@@ -2,7 +2,6 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import React from "react";
 import LatestBlogCard from "./components/LatestBlogCard";
 import AllBlogsSection from "./components/AllBlogsSection";
-import Footer from "@/app/components/footer";
 
 type Props = {};
 
@@ -30,7 +29,6 @@ function Blogs({}: Props) {
       <section id="all-blog-cards" className="bg-[#ddd]">
         <AllBlogsSection />
       </section>
-      <Footer />
     </main>
   );
 }

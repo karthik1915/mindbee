@@ -41,7 +41,6 @@ function Courses({ params }: { params: { slug: string } }) {
       <section id="other-courses" className="w-full bg-secondary">
         <OtherCourses contents={otherContent} />
       </section>
-      <Footer />
     </section>
   );
 }
