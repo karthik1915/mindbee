@@ -56,7 +56,7 @@ function StepsSection({}: Props) {
         <div className="flex flex-row flex-wrap justify-center gap-16 md:gap-24">
           <Circle
             ref={div1Ref}
-            title="Enroll the Course"
+            title="Enroll"
             description="Enroll Our Salesfoce course by easy enquiry with us"
           >
             <Image

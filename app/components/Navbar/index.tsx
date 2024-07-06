@@ -17,7 +17,7 @@ type Props = {};
 
 const NavBar = (props: Props) => {
   return (
-    <section
+    <nav
       role="navigation"
       aria-label="Main navigation menu"
       className="fixed top-0 z-50 flex w-screen items-center justify-between bg-navbar px-9 py-4 pr-6 text-lg text-background"
@@ -26,14 +26,11 @@ const NavBar = (props: Props) => {
         <Image
           src="/mindbee_logo_square.png"
           alt="mindbee_logo_svg"
-          width={200}
-          height={56}
+          width={220}
+          height={69}
         />
       </Link>
-      <NavigationMenu
-        aria-label="navigation links"
-        className="hidden gap-5 font-semibold lg:flex"
-      >
+      <div className="hidden gap-3 md:flex">
         <Link className="px-2 py-1 text-xl" href="/">
           Home
         </Link>
@@ -44,39 +41,27 @@ const NavBar = (props: Props) => {
         >
           About
         </ScrollLink>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavServices />
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger tabIndex={-1}>
-              <Link aria-label="Our Blogs" className="text-xl" href="/blogs">
-                Blogs
-              </Link>
-            </NavigationMenuTrigger>
-            <NavigationMenuContent
-              aria-hidden
-              className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]"
-            >
-              <div>Recent / Custom</div>
-              <div>set blogs</div>
-              <div>are recommended</div>
-              <div>here</div>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <ScrollLink
-            aria-label="Contact us"
-            className="px-2 py-1 text-xl"
-            href="/#contact"
-          >
-            Contact
-          </ScrollLink>
-        </NavigationMenuList>
-      </NavigationMenu>
-      <div className="lg:hidden">
+        <NavServices />
+        <Link
+          aria-label="Our Blogs"
+          className="px-2 py-1 text-xl"
+          href="/blogs"
+        >
+          Blogs
+        </Link>
+
+        <ScrollLink
+          aria-label="Contact us"
+          className="px-2 py-1 text-xl"
+          href="/#contact"
+        >
+          Contact
+        </ScrollLink>
+      </div>
+      <div className="md:hidden">
         <Sidebar isScrolled={true} />
       </div>
-    </section>
+    </nav>
   );
 };
 

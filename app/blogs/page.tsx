@@ -2,8 +2,17 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import React from "react";
 import LatestBlogCard from "./components/LatestBlogCard";
 import AllBlogsSection from "./components/AllBlogsSection";
+import { Metadata } from "next";
 
 type Props = {};
+
+export function generateMetadata({ params }: { params: string }): Metadata {
+  return {
+    title: "Blogs - Mindbee",
+    description:
+      "Explore our blog section to stay updated with the latest news, articles, and insights about salesforce and mindbee.",
+  };
+}
 
 function Blogs({}: Props) {
   return (

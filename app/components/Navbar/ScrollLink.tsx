@@ -6,9 +6,10 @@ interface ScrollLinkProps {
   href: string;
   children: React.ReactNode;
   className?: string;
+  role?: string;
 }
 
-const ScrollLink = ({ href, children, className }: ScrollLinkProps) => {
+const ScrollLink = ({ href, children, className, role }: ScrollLinkProps) => {
   const router = useRouter();
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
@@ -25,7 +26,7 @@ const ScrollLink = ({ href, children, className }: ScrollLinkProps) => {
   };
 
   return (
-    <Link href={href} role="link" className={className} onClick={handleClick}>
+    <Link role={role} href={href} className={className} onClick={handleClick}>
       {children}
     </Link>
   );

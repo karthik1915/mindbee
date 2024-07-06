@@ -96,6 +96,7 @@ function CourseCard({ props }: Props) {
         </div>
 
         <Link
+          tabIndex={-1}
           aria-label={`Enroll ${props.title} course now`}
           href={props.courseLink}
           className="rounded-2xl py-2 text-center font-oxygen font-semibold ring ring-primary hover:bg-primary"

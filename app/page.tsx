@@ -4,15 +4,15 @@ import FAQSection from "./components/FAQ";
 import HeroSection from "./components/HeroSection";
 import Reviews from "./components/Reviews";
 import StepsSection from "./components/StepsSection";
-import WhatWeDoSection from "./components/WhatWeDoSection";
+import Consultation from "./components/Consultation";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
+      <Consultation />
       <Courses />
       <StepsSection />
-      <WhatWeDoSection />
       <FAQSection />
       <Reviews />
       <ContactSection />

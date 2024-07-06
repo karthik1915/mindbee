@@ -24,8 +24,11 @@ const oxygen = Oxygen({
 });
 
 export const metadata: Metadata = {
-  title: "Mindbee",
+  title: "Mindbee Consulatation",
   description: "Mindbee salesforce consulting",
+  icons: {
+    icon: "/public/icon.png",
+  },
 };
 
 export default function RootLayout({

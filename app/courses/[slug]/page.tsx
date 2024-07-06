@@ -1,4 +1,5 @@
-import Footer from "@/app/components/footer";
+import Head from "next/head";
+import type { Metadata } from "next";
 import PieChart from "./Charts/piechart";
 import HeroSection from "./components/HeroSection";
 import OtherCourses from "./components/OtherCourses";
@@ -21,6 +22,17 @@ const slugMap: Record<string, CourseDetailsProps> = {
   "salesforce-ai-associate": SalesforceAIAssociateCourseDetails,
 };
 
+type CoursesProps = {
+  params: { slug: string };
+};
+
+export function generateMetadata({ params }: CoursesProps): Metadata {
+  const course = slugMap[params.slug];
+  return {
+    title: `${course.title} - MindBee`,
+    description: course.description,
+  };
+}
 function Courses({ params }: { params: { slug: string } }) {
   const content = slugMap[params.slug];
   const otherContent = Object.keys(slugMap)
