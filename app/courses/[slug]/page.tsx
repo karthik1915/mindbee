@@ -1,43 +1,23 @@
-import Head from "next/head";
-import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import PieChart from "./Charts/piechart";
 import HeroSection from "./components/HeroSection";
 import OtherCourses from "./components/OtherCourses";
-import {
-  CourseDetailsProps,
-  SalesforceAdminCourseDetails,
-  SalesforceAppBuilderCourseDetails,
-  SalesforceAIAssociateCourseDetails,
-  SalesforcePlatformDeveloper1CourseDetails,
-  SalesforcePlatformDeveloper2CourseDetails,
-} from "./CourseData";
 import KeyHighlights from "./components/KeyHighLight";
 import CourseRegForm from "./components/CourseForm";
+import courses from "./CourseData";
 
-const slugMap: Record<string, CourseDetailsProps> = {
-  "salesforce-admin": SalesforceAdminCourseDetails,
-  "salesforce-app-builder": SalesforceAppBuilderCourseDetails,
-  "salesforce-pd-1": SalesforcePlatformDeveloper1CourseDetails,
-  "salesforce-pd-2": SalesforcePlatformDeveloper2CourseDetails,
-  "salesforce-ai-associate": SalesforceAIAssociateCourseDetails,
-};
-
-type CoursesProps = {
-  params: { slug: string };
-};
-
-export function generateMetadata({ params }: CoursesProps): Metadata {
-  const course = slugMap[params.slug];
-  return {
-    title: `${course.title} - MindBee`,
-    description: course.description,
-  };
+export async function generateStaticParams() {
+  return courses.map((course) => ({ slug: course.slug }));
 }
-function Courses({ params }: { params: { slug: string } }) {
-  const content = slugMap[params.slug];
-  const otherContent = Object.keys(slugMap)
-    .filter((slug) => slug !== params.slug)
-    .map((slug) => slugMap[slug]);
+
+function Page({ params }: { params: { slug: string } }) {
+  const { slug } = params;
+  const courseData = courses.find((c) => c.slug === slug);
+  const otherCourseData = courses.filter((c) => c.slug !== slug);
+
+  if (!courseData) {
+    notFound(); // This will trigger the 404 page
+  }
 
   return (
     <section className="pt-[80px]">
@@ -45,16 +25,16 @@ function Courses({ params }: { params: { slug: string } }) {
         id="courses-hero"
         className="mx-auto my-10 flex w-full max-w-screen-2xl flex-col items-center lg:flex-row"
       >
-        <HeroSection content={content} />
-        <PieChart data={content.data} badge={content.badgeUrl} />
+        <HeroSection content={courseData} otherCourseData={otherCourseData} />
+        <PieChart data={courseData.data} badge={courseData.badgeUrl} />
       </main>
-      <KeyHighlights course={content.title} />
+      <KeyHighlights course={courseData.title} />
       <CourseRegForm />
       <section id="other-courses" className="w-full bg-secondary">
-        <OtherCourses contents={otherContent} />
+        <OtherCourses contents={otherCourseData} />
       </section>
     </section>
   );
 }
 
-export default Courses;
+export default Page;

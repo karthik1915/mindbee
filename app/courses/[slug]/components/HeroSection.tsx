@@ -2,7 +2,10 @@ import React from "react";
 import { CourseDetailsProps } from "../CourseData";
 import BreadCrumbs from "./BreadCrumbs";
 
-type Props = { content: CourseDetailsProps };
+type Props = {
+  content: CourseDetailsProps;
+  otherCourseData: CourseDetailsProps[];
+};
 
 const listIndicatorColors: string[] = [
   "bg-[#e74c3c]", // Red
@@ -15,9 +18,12 @@ const listIndicatorColors: string[] = [
 ];
 
 const HeroSection = (props: Props) => {
+  const otherCoursesTitlesAndLinks = props.otherCourseData.map(
+    ({ title, link }) => ({ title, link }),
+  );
   return (
     <div className="w-full lg:w-1/2">
-      <BreadCrumbs />
+      <BreadCrumbs otherCoursesTitlesAndLinks={otherCoursesTitlesAndLinks} />
       <h1 className="px-4 text-center font-exo text-3xl font-semibold text-headline md:text-4xl lg:text-left">
         {props.content.title}
       </h1>
