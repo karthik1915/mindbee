@@ -5,6 +5,7 @@ import NavBar from "./components/Navbar";
 
 import { cn } from "@/lib/utils";
 import Footer from "./components/footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const NunitoFont = Nunito({
   weight: "400",
@@ -49,6 +50,7 @@ export default function RootLayout({
         <NavBar />
         {children}
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

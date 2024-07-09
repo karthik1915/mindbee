@@ -16,7 +16,7 @@ function Page({ params }: { params: { slug: string } }) {
   const otherCourseData = courses.filter((c) => c.slug !== slug);
 
   if (!courseData) {
-    notFound(); // This will trigger the 404 page
+    notFound();
   }
 
   return (
@@ -29,7 +29,7 @@ function Page({ params }: { params: { slug: string } }) {
         <PieChart data={courseData.data} badge={courseData.badgeUrl} />
       </main>
       <KeyHighlights course={courseData.title} />
-      <CourseRegForm />
+      <CourseRegForm formName={courseData.formName} />
       <section id="other-courses" className="w-full bg-secondary">
         <OtherCourses contents={otherCourseData} />
       </section>

@@ -18,11 +18,17 @@ const Programs = (props: Props) => {
               className="flex flex-col gap-4 px-3 pb-10 pt-16"
             >
               <div className="flex items-center justify-center gap-3">
-                <span className="h-0.5 w-10 rounded-sm bg-headline" />
+                <span
+                  className="h-0.5 w-10 rounded-sm bg-headline"
+                  aria-hidden
+                />
                 <h3 className="text-center font-exo text-3xl font-bold">
                   {program.title}
                 </h3>
-                <span className="h-0.5 w-10 rounded-sm bg-headline" />
+                <span
+                  className="h-0.5 w-10 rounded-sm bg-headline"
+                  aria-hidden
+                />
               </div>
               <div className="flex flex-wrap items-center justify-center gap-5 gap-y-4">
                 <SpanCards
@@ -38,6 +44,7 @@ const Programs = (props: Props) => {
                 <SpanCards
                   title="Methodology"
                   value="VILT"
+                  hoverTitle="Virtual instructor-led training"
                   icon={<Monitor className="inline" color="#5f6c7b" />}
                 />
               </div>
@@ -80,6 +87,7 @@ const Programs = (props: Props) => {
                     className="text-blue-500 underline hover:text-blue-700"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`${program.title} - curriculum`}
                   >
                     Download Curriculum
                   </a>
@@ -134,13 +142,19 @@ const SpanCards = ({
   title,
   value,
   icon,
+  hoverTitle,
 }: {
   title: string;
   value: string;
+  hoverTitle?: string;
   icon: JSX.Element;
 }) => {
   return (
-    <div className="rounded-full border border-subheadline bg-gradient-to-br from-red-200 px-3 py-2 font-semibold shadow-md">
+    <div
+      title={hoverTitle}
+      aria-label={`Methodology - ${hoverTitle}`}
+      className="rounded-full border border-subheadline bg-gradient-to-br from-red-200 px-3 py-2 font-semibold shadow-md"
+    >
       {icon} {title} : {value}
     </div>
   );

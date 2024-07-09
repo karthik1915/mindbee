@@ -19,6 +19,7 @@ export interface CourseDetailsProps {
   link: string;
   badgeUrl: string;
   data: courseDataType[];
+  formName: string;
 }
 
 export const courses: CourseDetailsProps[] = [
@@ -43,6 +44,7 @@ export const courses: CourseDetailsProps[] = [
     badgeUrl: "/badges/salesforce_admin_badge.png",
     link: "/courses/salesforce-admin",
     data: SalesForceAdminData,
+    formName: "salesforce-admin",
   },
   {
     id: 2,
@@ -63,6 +65,7 @@ export const courses: CourseDetailsProps[] = [
     link: "/courses/salesforce-app-builder",
     badgeUrl: "/badges/salesforce_app_builder_badge.png",
     data: SalesForceAppBuilderData,
+    formName: "salesforce-app-builder",
   },
   {
     id: 3,
@@ -82,6 +85,7 @@ export const courses: CourseDetailsProps[] = [
     badgeUrl: "/badges/salesforce_ai_associate_badge.png",
     link: "/courses/salesforce-ai-associate",
     data: SalesforceAIAssociateData,
+    formName: "salesforce-ai-associate",
   },
   {
     id: 4,
@@ -101,6 +105,7 @@ export const courses: CourseDetailsProps[] = [
     link: "/courses/salesforce-pd-1",
     badgeUrl: "/badges/salesforce_pd_1_badge.png",
     data: SalesforcePlatformDeveloper1Data,
+    formName: "salesforce-pd-1",
   },
   {
     id: 5,
@@ -121,6 +126,7 @@ export const courses: CourseDetailsProps[] = [
     link: "/courses/salesforce-pd-2",
     badgeUrl: "/badges/salesforce_pd_2_badge.png",
     data: SalesforcePlatformDeveloper2Data,
+    formName: "salesforce-pd-2",
   },
 ];
 export default courses;

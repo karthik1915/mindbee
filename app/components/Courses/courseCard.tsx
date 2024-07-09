@@ -44,8 +44,7 @@ function CourseCard({ props }: Props) {
         alt={`${props.title} course image`}
         width={360}
         height={200}
-        objectFit="cover"
-        layout="responsive"
+        loading="lazy"
       />
       <div className="flex flex-grow flex-col justify-between">
         <h3 className="py-2 text-center font-oxygen text-xl font-semibold">
@@ -119,6 +118,7 @@ function CourseCard({ props }: Props) {
           alt={`${props.title} Badge`}
           width={100}
           height={100}
+          className="h-auto w-auto"
         />
       </motion.div>
     </div>

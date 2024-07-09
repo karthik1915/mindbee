@@ -18,8 +18,8 @@ export const InternshipPrograms: InternshipProgramProps[] = [
       "Salesforce Administrator training provides individuals with the necessary skills to manage and customize Salesforce applications. As a Salesforce Administrator, you'll learn to configure and maintain Salesforce, manage security settings, and automate processes.",
     ProgramDescription:
       "In our Salesforce Administrator training, we offer a transformative learning experience for individuals seeking to become skilled Salesforce administrators and for those who a want to enter into the Salesforce ecosystem.",
-    durationInDays: 5,
-    HoursPerDay: 2,
+    durationInDays: 15,
+    HoursPerDay: 1.4,
     outcomes: [
       "Customize your application, including page layouts, fields, tabs, and business processes",
       "Create a secure Salesforce environment",
@@ -39,7 +39,7 @@ export const InternshipPrograms: InternshipProgramProps[] = [
       ["Day 2", ["Data Modelling & UI Customization"]],
     ]),
     pdfLink:
-      "https://drive.google.com/file/d/1GpifOe_6IUEpPV_7V7DSFxhvx9xdRqFZ/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1YPqqIKo20yZaX8OtUbIyWbEUIJTSrXqe/view",
   },
   {
     id: 2,
