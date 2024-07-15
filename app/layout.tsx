@@ -25,10 +25,21 @@ const oxygen = Oxygen({
 });
 
 export const metadata: Metadata = {
-  title: "Mindbee Consulatation",
-  description: "Mindbee salesforce consulting",
-  icons: {
-    icon: "/public/icon.png",
+  title: "Mindbees Consulatation",
+  description: "Mindbees salesforce consulting company",
+  openGraph: {
+    url: "https://mindbeesconsulting.com/",
+    type: "website",
+    description: "Mindbees salesforce consulting company",
+    siteName: "Mindbees Consulting",
+    images: [
+      {
+        url: "https://cz9aqx1sonm5juhb.public.blob.vercel-storage.com/opengraph/minbees_home_og-MNxSvxQL8LHuoIdYRHdoxmT8vOUPLv.png",
+        width: 1200,
+        height: 630,
+        alt: "Mindbees Consultation",
+      },
+    ],
   },
 };
 

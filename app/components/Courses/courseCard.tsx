@@ -107,8 +107,6 @@ function CourseCard({ props }: Props) {
         className="absolute right-0 top-0 z-40"
         initial={{
           scale: 1.4,
-          // translateX: "33%",
-          // translateY: "-33%",
           opacity: 0,
         }}
         ref={scope2}
@@ -116,8 +114,8 @@ function CourseCard({ props }: Props) {
         <Image
           src={props.courseLogoUrl}
           alt={`${props.title} Badge`}
-          width={100}
-          height={100}
+          width={80}
+          height={80}
           className="h-auto w-auto"
         />
       </motion.div>

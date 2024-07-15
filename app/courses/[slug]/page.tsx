@@ -5,9 +5,37 @@ import OtherCourses from "./components/OtherCourses";
 import KeyHighlights from "./components/KeyHighLight";
 import CourseRegForm from "./components/CourseForm";
 import courses from "./CourseData";
+import { Metadata } from "next/types";
 
 export async function generateStaticParams() {
   return courses.map((course) => ({ slug: course.slug }));
+}
+
+export function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Metadata {
+  const course = courses.find((c) => c.slug === params.slug);
+  return {
+    title: `${course?.title} - MindBee`,
+    description: `Explore ${course?.title} Course provided by Mindbees`,
+    openGraph: {
+      url: `https://mindbeesconsulting.com/courses/${course?.slug}`,
+      siteName: "Mindbee Consulting",
+      title: `${course?.title} - MindBee`,
+      description: `Explore ${course?.title} Course provided by Mindbees`,
+      images: [
+        {
+          url: course?.ogImageLink!,
+          width: 1200,
+          height: 630,
+          alt: `${course?.title} - MindBee`,
+        },
+      ],
+      type: "website",
+    },
+  };
 }
 
 function Page({ params }: { params: { slug: string } }) {

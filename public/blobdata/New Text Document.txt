@@ -1,5 +1,0 @@
-import { put } from "@vercel/blob";
-
-const { url } = await put('articles/blob.txt', 'Hello World!', { access: 'public' });
-
-BLOB_READ_WRITE_TOKEN="vercel_blob_rw_CZ9AqX1sOnM5JUHB_7FhLqnhKfWqpmiygLS8HXiQwe73x2Z"

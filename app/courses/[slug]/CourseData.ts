@@ -9,6 +9,7 @@ import {
 
 export interface CourseDetailsProps {
   id: number;
+  ogImageLink: string;
   slug: string;
   title: string;
   description: string;
@@ -45,6 +46,8 @@ export const courses: CourseDetailsProps[] = [
     link: "/courses/salesforce-admin",
     data: SalesForceAdminData,
     formName: "salesforce-admin",
+    ogImageLink:
+      "https://cz9aqx1sonm5juhb.public.blob.vercel-storage.com/opengraph/salesforce_admin_og-KPpqPc27TQGFeqdZC5woBYVD2vhkmU.png",
   },
   {
     id: 2,
@@ -66,6 +69,8 @@ export const courses: CourseDetailsProps[] = [
     badgeUrl: "/badges/salesforce_app_builder_badge.png",
     data: SalesForceAppBuilderData,
     formName: "salesforce-app-builder",
+    ogImageLink:
+      "https://cz9aqx1sonm5juhb.public.blob.vercel-storage.com/opengraph/salesforce_app_builder_og-IipYQLo42kv1dfoelXM7i2apSAcq2b.png",
   },
   {
     id: 3,
@@ -86,6 +91,8 @@ export const courses: CourseDetailsProps[] = [
     link: "/courses/salesforce-ai-associate",
     data: SalesforceAIAssociateData,
     formName: "salesforce-ai-associate",
+    ogImageLink:
+      "https://cz9aqx1sonm5juhb.public.blob.vercel-storage.com/opengraph/salesforce_ai_associate_og-eEeK0XRZQDGeNfqsDkz8UA0myrwyF6.png",
   },
   {
     id: 4,
@@ -106,6 +113,8 @@ export const courses: CourseDetailsProps[] = [
     badgeUrl: "/badges/salesforce_pd_1_badge.png",
     data: SalesforcePlatformDeveloper1Data,
     formName: "salesforce-pd-1",
+    ogImageLink:
+      "https://cz9aqx1sonm5juhb.public.blob.vercel-storage.com/opengraph/salesforce_pd1_og-lTJJrAIdHiAvVWByBoLbyrskPqJTuR.png",
   },
   {
     id: 5,
@@ -127,6 +136,8 @@ export const courses: CourseDetailsProps[] = [
     badgeUrl: "/badges/salesforce_pd_2_badge.png",
     data: SalesforcePlatformDeveloper2Data,
     formName: "salesforce-pd-2",
+    ogImageLink:
+      "https://cz9aqx1sonm5juhb.public.blob.vercel-storage.com/opengraph/salesforce_pd2_og-dzrur8eHEWk4c2izvf7IYuZ7GYo1lV.png",
   },
 ];
 export default courses;

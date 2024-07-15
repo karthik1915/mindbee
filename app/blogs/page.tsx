@@ -8,9 +8,23 @@ type Props = {};
 
 export function generateMetadata({ params }: { params: string }): Metadata {
   return {
-    title: "Blogs - Mindbee",
-    description:
-      "Explore our blog section to stay updated with the latest news, articles, and insights about salesforce and mindbee.",
+    title: "Blogs - MindBee",
+    description: "Explore various blogs published by Mindbees",
+    openGraph: {
+      url: "https://mindbeesconsulting.com/blogs",
+      siteName: "MindBee Consulting",
+      title: "Blogs - MindBee",
+      description: "Explore various blogs published by Mindbees ",
+      images: [
+        {
+          url: "https://cz9aqx1sonm5juhb.public.blob.vercel-storage.com/opengraph/salesforce_blogs_og-I9mNlsQaHRwKZMTWK0Z1EfsKmQU9JU.png", // Update with your actual image URL
+          width: 1200,
+          height: 630,
+          alt: "MindBee Blogs",
+        },
+      ],
+      type: "website",
+    },
   };
 }
 

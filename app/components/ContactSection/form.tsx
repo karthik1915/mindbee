@@ -5,6 +5,7 @@ import React, { useRef, useState, FormEvent } from "react";
 import { postData, FormData } from "@/app/actions/postForms";
 import { Switch } from "@/components/ui/switch";
 import { useToast } from "@/components/ui/use-toast";
+import { Check, CircleX, Loader2Icon } from "lucide-react";
 
 const ContactForm = () => {
   const nameRef = useRef<HTMLInputElement>(null);
@@ -12,6 +13,10 @@ const ContactForm = () => {
   const mobileRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
   const [getUpdates, setGetUpdates] = useState(false);
+  //
+  const [loading, setLoading] = useState<boolean>(false);
+  //
+  const [success, setSuccess] = useState<boolean | null>(null);
   //
   const { toast } = useToast();
 
@@ -27,9 +32,11 @@ const ContactForm = () => {
       message: messageRef.current?.value ?? undefined,
       get_updates: getUpdates,
     };
-
+    setLoading(true);
     const response = await postData(formData);
     if (response.success === true) {
+      setLoading(false);
+      setSuccess(true);
       toast({
         title: "Message sent Successfully",
         description: "Thanks for your message, we will reach you out sonn!",
@@ -40,6 +47,8 @@ const ContactForm = () => {
       if (messageRef.current) messageRef.current.value = "";
       setGetUpdates(false); // Reset the switch
     } else {
+      setLoading(false);
+      setSuccess(false);
       toast({
         title: "Error Sending Message",
         description: "Oops, something went wrong. Please try again later!",
@@ -119,8 +128,11 @@ const ContactForm = () => {
         />
         <button
           type="submit"
-          className="w-44 rounded-xl bg-headline py-2 text-white transition-colors duration-200 hover:bg-teal-800"
+          className="flex w-44 items-center justify-center gap-3 rounded-xl bg-headline px-3 py-2 text-white transition-colors duration-200 hover:bg-teal-800"
         >
+          {loading && <Loader2Icon className="animate-spin" />}
+          {success === true && <Check />}
+          {success === false && <CircleX />}
           Send Message
         </button>
       </div>

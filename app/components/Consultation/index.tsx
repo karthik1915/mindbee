@@ -1,5 +1,6 @@
 import React from "react";
 import { CloudTech, Industries } from "./constant";
+import { ArrowRight, Cloud, Factory } from "lucide-react";
 
 type Props = {};
 
@@ -24,9 +25,15 @@ function Consultation({}: Props) {
               return (
                 <li
                   key={point}
-                  className="border-b px-4 py-3 text-xl text-white"
+                  className="group flex items-center justify-between border-b px-1 py-3 text-xl text-white transition-all duration-100 hover:cursor-pointer hover:tracking-wider"
                 >
-                  {point}
+                  <p className="flex items-center gap-4">
+                    <Cloud />
+                    {point}
+                  </p>
+                  <p className="-translate-x-4 opacity-0 transition-all duration-100 group-hover:translate-x-0 group-hover:opacity-100">
+                    <ArrowRight />
+                  </p>
                 </li>
               );
             })}
@@ -41,9 +48,15 @@ function Consultation({}: Props) {
               return (
                 <li
                   key={point}
-                  className="border-b px-4 py-3 text-xl text-white"
+                  className="group flex items-center justify-between border-b px-1 py-3 text-xl text-white transition-all duration-100 hover:cursor-pointer hover:tracking-wide"
                 >
-                  {point}
+                  <p className="flex items-center gap-2">
+                    <Factory />
+                    {point}
+                  </p>
+                  <p className="-translate-x-2 opacity-0 transition-all duration-100 group-hover:translate-x-0 group-hover:opacity-100">
+                    <ArrowRight />
+                  </p>
                 </li>
               );
             })}

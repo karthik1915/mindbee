@@ -50,8 +50,8 @@ function Footer() {
           <nav className="space-y-2 text-center">
             <FooterLink href="/">Rules & privacy</FooterLink>
             <FooterLink href="/">Refund Policy</FooterLink>
-            <FooterLink href="/">Contact Us</FooterLink>
-            <FooterLink href="/">Internships</FooterLink>
+            <FooterLink href="/#contact">Contact Us</FooterLink>
+            <FooterLink href="/internships">Internships</FooterLink>
           </nav>
         </div>
 
@@ -89,7 +89,10 @@ type FooterLinkProps = {
   children: React.ReactNode;
 };
 
-const FooterLink = ({ href, children }: FooterLinkProps) => {
+const FooterLink: React.FC<FooterLinkProps> = ({
+  href,
+  children,
+}: FooterLinkProps) => {
   return (
     <Link href={href} className="my-2 block underline underline-offset-4">
       {children}
