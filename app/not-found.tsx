@@ -6,6 +6,7 @@ export default function Custom404() {
     <main className="flex min-h-screen flex-col items-center justify-center bg-[#efefef] text-center lg:flex-row">
       <Image
         src="/404.png"
+        priority
         alt="404 page not found images"
         width={550}
         height={350}

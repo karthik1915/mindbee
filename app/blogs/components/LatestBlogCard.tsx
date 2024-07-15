@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 type Props = {};
@@ -17,9 +18,12 @@ const LatestBlogCard = (props: Props) => {
         <TitleFallback />
         <DescriptionFallback1 />
         <DescriptionFallback2 />
-        <button className="rounded-full border border-foreground bg-foreground px-5 py-2 font-exo text-background hover:bg-foreground/80">
+        <Link
+          href="/blogs/test-blog-no1"
+          className="rounded-full border border-foreground bg-foreground px-5 py-2 font-exo text-background hover:bg-foreground/80"
+        >
           Read this Blog
-        </button>
+        </Link>
       </div>
     </div>
   );

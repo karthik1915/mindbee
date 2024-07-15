@@ -6,7 +6,7 @@ import {
 } from "@aws-sdk/client-dynamodb";
 
 export interface FormData {
-  form_type: "main_form" | "course_form" | "internship_form";
+  form_type: "main_form" | "course_form" | "internship_form" | "review_form";
   form_name: string;
   name: string;
   email: string;

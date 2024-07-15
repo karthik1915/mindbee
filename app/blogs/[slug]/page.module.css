@@ -1,0 +1,8 @@
+.blogContainer {
+    @apply mx-auto min-h-screen max-w-screen-lg pt-[110px] prose px-4;
+}
+
+.blogTitle {
+    @apply text-4xl font-oxygen text-center;
+}
+
