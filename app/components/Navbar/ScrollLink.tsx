@@ -18,7 +18,11 @@ const ScrollLink = ({ href, children, className, role }: ScrollLinkProps) => {
       const id = href.slice(2);
       const element = document.getElementById(id);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        // Scroll with an offset to account for the fixed navbar
+        const offset = 100; // Height of the fixed navbar
+        const top =
+          element.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: "smooth" });
       } else {
         router.push(href);
       }

@@ -30,21 +30,21 @@ const NavBar = (props: Props) => {
           height={66}
         />
       </Link>
-      <div className="hidden gap-3 md:flex">
-        <Link className="px-2 py-1 text-xl" href="/">
+      <div className="hidden items-center gap-3 md:flex">
+        <Link className="px-2 py-1 text-xl lg:text-2xl" href="/">
           Home
         </Link>
         <ScrollLink
           aria-label="About us"
           href="/#about"
-          className="px-2 py-1 text-xl"
+          className="px-2 py-1 text-xl lg:text-2xl"
         >
           About
         </ScrollLink>
         <NavServices />
         <Link
           aria-label="Our Blogs"
-          className="px-2 py-1 text-xl"
+          className="px-2 py-1 text-xl lg:text-2xl"
           href="/blogs"
         >
           Blogs
@@ -52,7 +52,7 @@ const NavBar = (props: Props) => {
 
         <ScrollLink
           aria-label="Contact us"
-          className="px-2 py-1 text-xl"
+          className="px-2 py-1 text-xl lg:text-2xl"
           href="/#contact"
         >
           Contact

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Oxygen, Exo, Nunito } from "next/font/google";
 import "./globals.css";
-import NavBar from "./components/Navbar";
 
 import { cn } from "@/lib/utils";
 import Footer from "./components/footer";
@@ -58,7 +57,6 @@ export default function RootLayout({
           ExoFont.variable,
         )}
       >
-        <NavBar />
         {children}
         <Footer />
         <Toaster />

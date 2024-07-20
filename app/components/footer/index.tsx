@@ -31,10 +31,10 @@ function Footer() {
 
         {/* Company Links Section */}
         <div>
-          <p className="text-center font-oxygen text-xl font-semibold">
+          <h3 className="text-center font-oxygen text-xl font-semibold">
             Company
-          </p>
-          <nav className="space-y-2 text-center">
+          </h3>
+          <nav className="space-y-2 text-center" role="navigation">
             <FooterLink href="/">Home</FooterLink>
             <FooterLink href="/#about">About</FooterLink>
             <FooterLink href="/courses/salesforce-admin">Courses</FooterLink>
@@ -44,10 +44,10 @@ function Footer() {
 
         {/* Support Links Section */}
         <div>
-          <p className="text-center font-oxygen text-xl font-semibold">
+          <h3 className="text-center font-oxygen text-xl font-semibold">
             Support
-          </p>
-          <nav className="space-y-2 text-center">
+          </h3>
+          <nav className="space-y-2 text-center" role="navigation">
             <FooterLink href="/">Rules & privacy</FooterLink>
             <FooterLink href="/">Refund Policy</FooterLink>
             <FooterLink href="/#contact">Contact Us</FooterLink>

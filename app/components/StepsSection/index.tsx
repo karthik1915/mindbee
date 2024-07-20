@@ -50,14 +50,16 @@ function StepsSection({}: Props) {
       className="relative mx-auto max-w-7xl px-5 py-12"
     >
       <div className="flex h-full w-full flex-col items-stretch justify-between gap-10">
-        <h1 className="text-center font-exo text-3xl font-semibold">
-          Steps Involved in All Courses
-        </h1>
+        <header>
+          <h2 className="text-center font-exo text-3xl font-semibold text-headline">
+            Steps Involved in All Courses
+          </h2>
+        </header>
         <div className="flex flex-row flex-wrap justify-center gap-16 md:gap-24">
           <Circle
             ref={div1Ref}
             title="Enroll"
-            description="Enroll Our Salesfoce course by easy enquiry with us"
+            description="Enroll Our Salesforce course by easy enquiry with us"
           >
             <Image
               aria-hidden

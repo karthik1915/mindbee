@@ -1,10 +1,9 @@
 "use client";
 import { courseProps } from "./courses";
 import Image from "next/image";
-import { easeInOut, easeOut, motion, useAnimate } from "framer-motion";
+import { easeOut, motion, useAnimate } from "framer-motion";
 import Link from "next/link";
-import { Scale, Star } from "lucide-react";
-import { OpacityIcon } from "@radix-ui/react-icons";
+import { Star } from "lucide-react";
 
 type Props = {
   props: courseProps;
@@ -47,9 +46,9 @@ function CourseCard({ props }: Props) {
         loading="lazy"
       />
       <div className="flex flex-grow flex-col justify-between">
-        <h3 className="py-2 text-center font-oxygen text-xl font-semibold">
+        <h4 className="py-2 text-center font-oxygen text-xl font-semibold">
           {props.title}
-        </h3>
+        </h4>
         <div className="flex w-full items-end justify-evenly">
           <p>Enrollments : {props.enrollment}</p>
           <div
@@ -66,7 +65,7 @@ function CourseCard({ props }: Props) {
           </div>
         </div>
         <Link
-          aria-hidden
+          aria-label={`Enroll ${props.title} course now`}
           href={props.courseLink}
           className="rounded-2xl py-2 text-center font-oxygen font-semibold ring ring-primary hover:bg-primary"
         >
@@ -80,9 +79,9 @@ function CourseCard({ props }: Props) {
         className="absolute left-0 top-0 z-10 flex h-full w-full flex-col justify-between rounded-xl bg-[#d8eefe] p-5 shadow-inner"
       >
         <div>
-          <h3 className="py-3 font-oxygen text-2xl font-semibold">
+          <h4 className="py-3 font-oxygen text-2xl font-semibold">
             {props.title}
-          </h3>
+          </h4>
           <ul
             aria-label={`${props.title} course contents`}
             className="list-inside list-image-[url(/check.svg)] text-lg"

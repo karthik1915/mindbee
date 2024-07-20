@@ -13,12 +13,14 @@ function FAQSection({}: Props) {
   return (
     <section className="relative mx-auto my-12 flex w-full max-w-6xl flex-col items-center px-4 lg:flex-row">
       <div className="w-full flex-grow px-3 py-10 lg:py-0">
-        <h1 className="text-center font-exo text-4xl font-semibold lg:text-left">
-          Frequently asked questions
-        </h1>
-        <h2 className="text-center font-oxygen text-xl lg:text-left">
-          Got Questions? We&apos;ve Got Answers!
-        </h2>
+        <header>
+          <h2 className="text-center font-exo text-4xl font-semibold text-headline lg:text-left">
+            Frequently asked questions
+          </h2>
+          <h3 className="text-center font-oxygen text-xl text-subheadline lg:text-left">
+            Got Questions? We&apos;ve Got Answers!
+          </h3>
+        </header>
         <Accordion type="single" collapsible className="w-full py-3 lg:w-3/4">
           <AccordionItem value="item-1">
             <AccordionTrigger

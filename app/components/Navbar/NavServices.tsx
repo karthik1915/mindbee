@@ -1,87 +1,48 @@
-"use client";
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import ScrollLink from "./ScrollLink";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const NavServices = () => {
-  const [show, setShow] = useState<boolean>(false);
-  const menuRef = useRef<HTMLDivElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
-
-  const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === "Escape") {
-      setShow(false);
-      buttonRef.current?.focus();
-    }
-  };
-
-  const handleClickOutside = (event: MouseEvent | TouchEvent) => {
-    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-      setShow(false);
-    }
-  };
-
-  useEffect(() => {
-    if (show) {
-      document.addEventListener("mousedown", handleClickOutside);
-      document.addEventListener("touchstart", handleClickOutside);
-      document.addEventListener("keydown", handleKeyDown);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("touchstart", handleClickOutside);
-      document.removeEventListener("keydown", handleKeyDown);
-    }
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("touchstart", handleClickOutside);
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [show]);
-
   return (
-    <div className="relative">
-      <button
-        ref={buttonRef}
-        className="flex items-center gap-1 px-2 py-1 text-xl"
-        onClick={() => setShow(!show)}
-        aria-expanded={show}
+    <div className="group relative">
+      <ScrollLink
+        href="/#services"
+        className="flex items-center gap-1 px-2 py-1 text-xl lg:text-2xl"
         aria-haspopup="true"
+        aria-expanded="false"
       >
-        Services{" "}
-        <ChevronDown
+        Services
+        <ChevronRight
           size={16}
-          className={`${show && "rotate-180"} transition-transform duration-150`}
+          className="transition-transform duration-150 group-hover:rotate-90"
         />
-      </button>
-      {show && (
-        <div
-          ref={menuRef}
-          className="absolute right-0 top-12 flex w-60 translate-x-1/2 flex-col gap-3 rounded-xl bg-background px-5 py-6 shadow-xl"
-          role="menu"
+      </ScrollLink>
+      <div
+        className="absolute right-0 top-12 flex w-60 translate-x-1/2 flex-col gap-3 rounded-xl bg-background px-5 py-6 opacity-0 shadow-xl transition-opacity duration-150 group-hover:opacity-100"
+        role="menu"
+      >
+        <ScrollLink
+          className="flex items-center justify-between text-xl text-navbar lg:text-2xl"
+          href="/#consultation"
+          role="menuitem"
         >
-          <ScrollLink
-            className="flex items-center justify-between text-navbar"
-            href="/#consultation"
-            role="menuitem"
-          >
-            Consultation <ChevronRight />
-          </ScrollLink>
-          <ScrollLink
-            className="flex items-center justify-between text-navbar"
-            href="/#courses"
-            role="menuitem"
-          >
-            Courses <ChevronRight />
-          </ScrollLink>
-          <ScrollLink
-            className="flex items-center justify-between text-navbar"
-            href="/internships"
-            role="menuitem"
-          >
-            Internships <ChevronRight />
-          </ScrollLink>
-        </div>
-      )}
+          Consultation <ChevronRight />
+        </ScrollLink>
+        <ScrollLink
+          className="flex items-center justify-between text-xl text-navbar lg:text-2xl"
+          href="/#courses"
+          role="menuitem"
+        >
+          Courses <ChevronRight />
+        </ScrollLink>
+        <ScrollLink
+          className="flex items-center justify-between text-xl text-navbar lg:text-2xl"
+          href="/internships"
+          role="menuitem"
+        >
+          Internships <ChevronRight />
+        </ScrollLink>
+      </div>
     </div>
   );
 };
