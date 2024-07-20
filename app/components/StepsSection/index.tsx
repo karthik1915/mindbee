@@ -19,7 +19,7 @@ const Circle = forwardRef<
   return (
     <div
       ref={ref}
-      className="z-10 flex flex-col items-center gap-3 rounded-2xl bg-secondary px-3 py-5"
+      className="z-10 flex flex-col items-center gap-3 rounded-2xl bg-secondary px-3 py-5 shadow-md"
     >
       <div
         className={cn(
@@ -31,7 +31,7 @@ const Circle = forwardRef<
       </div>
       <div className="w-48 space-y-3">
         <h3 className="text-center font-oxygen text-xl">{title}</h3>
-        <p className="break-words text-lg">{description}</p>
+        <p className="text-pretty text-center text-lg">{description}</p>
       </div>
     </div>
   );

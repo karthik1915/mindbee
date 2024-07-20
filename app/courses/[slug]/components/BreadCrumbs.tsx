@@ -9,41 +9,37 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 type Props = {
-  otherCoursesTitlesAndLinks: { title: string; link: string }[];
+  parent: { title: string; link: string };
+  current: string;
+  menu: { title: string; link: string }[];
 };
 
 const BreadCrumbs = (props: Props) => {
   return (
-    <nav role="breadcrumbs" className="flex items-center px-5 pb-4">
+    <nav role="breadcrumbs" className="flex flex-wrap items-center">
       <Link href="/">Home</Link>
       <ChevronRight className="inline" size={20} />
-      <Link href="/#courses" className="inline">
-        courses
+      <Link href={props.parent.link} className="inline">
+        {props.parent.title}
       </Link>
       <ChevronRight className="inline" size={20} />
-      <DropdownNavMenu
-        otherCoursesTitlesAndLinks={props.otherCoursesTitlesAndLinks}
-      />
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <p className="flex cursor-pointer items-center gap-1">
+            {props.current}
+          </p>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="start" className="bg-white">
+          {props.menu.map(({ title, link }) => (
+            <DropdownMenuItem key={link}>
+              <Link href={link} className="capitalize lg:text-lg">
+                {title}
+              </Link>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
     </nav>
-  );
-};
-
-const DropdownNavMenu = ({ otherCoursesTitlesAndLinks }: Props) => {
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger className="flex items-center gap-1">
-        Courses
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="start" className="bg-white">
-        {otherCoursesTitlesAndLinks.map(({ title, link }) => (
-          <DropdownMenuItem key={link}>
-            <Link href={link} className="capitalize lg:text-lg">
-              {title}
-            </Link>
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
   );
 };
 

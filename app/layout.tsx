@@ -25,7 +25,7 @@ const oxygen = Oxygen({
 });
 
 export const metadata: Metadata = {
-  title: "Mindbees Consulatation",
+  title: "Mindbees Consultation",
   description: "Mindbees salesforce consulting company",
   openGraph: {
     url: "https://mindbeesconsulting.com/",

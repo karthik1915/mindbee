@@ -1,11 +1,11 @@
-export const CloudTech: string[] = [
-  "Sales Cloud",
-  "Service Cloud",
-  "Experience Cloud",
-  "Health Cloud",
-  "Financial Services Cloud",
-  "Education Cloud",
-  "Non-Profit Cloud",
+export const CloudTech: Record<string, string>[] = [
+  { "Sales Cloud": "salesforce-sales-cloud" },
+  { "Service Cloud": "salesforce-service-cloud" },
+  { "Experience Cloud": "salesforce-experience-cloud" },
+  { "Health Cloud": "salesforce-health-cloud" },
+  { "Financial Services Cloud": "salesforce-financial-services-cloud" },
+  { "Education Cloud": "salesforce-education-cloud" },
+  { "Non-Profit Cloud": "salesforce-non-profit-cloud" },
 ];
 
 export const Industries: string[] = [
