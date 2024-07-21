@@ -13,7 +13,7 @@ const OverViewCard = (props: Props) => {
     >
       <div className="flex items-center gap-3">
         <span role="presentation" className="h-0.5 w-9 rounded-xl bg-black" />
-        <p className="text-center font-semibold">{props.title}</p>
+        <h3 className="text-center font-semibold">{props.title}</h3>
       </div>
       <p className="font-oxygen text-2xl font-semibold">{props.paragraph}</p>
       <div className="flex items-center gap-4">

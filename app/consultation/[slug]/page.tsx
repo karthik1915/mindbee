@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Motto from "../components/Motto";
 import WhatSetUsApart from "../components/WhatSetUsApart";
 import HeroSection from "../components/HeroSection";
+import NavBar from "@/app/components/Navbar";
 
 export async function generateStaticParams() {
   return ConsulatationContent.map((consultation) => ({
@@ -36,12 +37,17 @@ function Page({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <main className="min-h-screen pt-[100px]">
-      <HeroSection consultation={consultation} others={othersConsultations} />
-      <consultation.Content />
-      <Motto />
-      <WhatSetUsApart />
-    </main>
+    <>
+      <header>
+        <NavBar />
+        <HeroSection consultation={consultation} others={othersConsultations} />
+      </header>
+      <main>
+        <consultation.Content />
+        <Motto />
+        <WhatSetUsApart />
+      </main>
+    </>
   );
 }
 

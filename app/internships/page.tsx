@@ -4,6 +4,7 @@ import Overview from "./components/overview";
 import Programs from "./components/programs";
 import { Metadata } from "next";
 import InternshipContact from "./components/Contact";
+import NavBar from "../components/Navbar";
 
 type Props = {};
 
@@ -33,12 +34,17 @@ export function generateMetadata({ params }: { params: string }): Metadata {
 
 function Page({}: Props) {
   return (
-    <section className="min-h-screen">
-      <HeroSection />
-      <Overview />
-      <Programs />
-      <InternshipContact />
-    </section>
+    <>
+      <header>
+        <NavBar />
+        <HeroSection />
+      </header>
+      <main>
+        <Overview />
+        <Programs />
+        <InternshipContact />
+      </main>
+    </>
   );
 }
 

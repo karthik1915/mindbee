@@ -55,19 +55,21 @@ const CourseForm = ({ formName }: Props) => {
 
   return (
     <form
+      id="course-form"
       className="grid gap-x-4 gap-y-8 p-4 md:grid-cols-2"
       onSubmit={handleSubmit}
     >
       <div className="col-span-2 flex flex-col justify-between gap-1 space-y-2 md:col-span-1">
         <input
+          id="name"
           ref={nameRef}
           required
-          aria-required
           className="rounded-xl bg-secondary px-4 py-3.5"
           type="text"
           placeholder="Name"
         />
         <input
+          id="email"
           required
           ref={emailRef}
           aria-required
@@ -76,6 +78,7 @@ const CourseForm = ({ formName }: Props) => {
           placeholder="Email"
         />
         <input
+          id="mobile"
           required
           ref={mobileRef}
           aria-required
@@ -86,6 +89,7 @@ const CourseForm = ({ formName }: Props) => {
       </div>
       <div className="col-span-2 flex flex-col gap-1 md:col-span-1">
         <textarea
+          id="message"
           required
           ref={messageRef}
           aria-required
@@ -94,15 +98,15 @@ const CourseForm = ({ formName }: Props) => {
         />
       </div>
       <div className="col-span-2 flex items-center justify-center space-x-2">
-        <label htmlFor="receive-future-updates" className="text-lg">
+        <label htmlFor="get-updates" className="text-lg">
           Recieve Future Updates
         </label>
         <Switch
+          id="get-updates"
           checked={getUpdates}
           onCheckedChange={(checked: boolean) => setGetUpdates(checked)}
           title="switch"
           className="bg-secondary"
-          id="airplane-mode"
         />
       </div>
       <button

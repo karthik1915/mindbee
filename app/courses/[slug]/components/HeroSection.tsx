@@ -22,7 +22,7 @@ const HeroSection = (props: Props) => {
     ({ title, link }) => ({ title, link }),
   );
   return (
-    <div className="w-full px-5 lg:w-1/2">
+    <section className="w-full px-5 lg:w-1/2">
       <BreadCrumbs
         parent={{ title: "courses", link: "/#courses" }}
         current={props.content.title}
@@ -48,7 +48,7 @@ const HeroSection = (props: Props) => {
           );
         })}
       </ul>
-    </div>
+    </section>
   );
 };
 

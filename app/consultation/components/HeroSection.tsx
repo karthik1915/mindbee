@@ -15,7 +15,7 @@ const HeroSection = (props: Props) => {
     link,
   }));
   return (
-    <header className="flex flex-col flex-wrap py-5 lg:flex-row">
+    <section className="mx-auto flex max-w-screen-2xl flex-col flex-wrap py-5 pt-[100px] lg:flex-row">
       <div className="flex flex-col justify-center gap-5 px-5 lg:w-1/2">
         <BreadCrumbs
           parent={{
@@ -45,13 +45,13 @@ const HeroSection = (props: Props) => {
       </div>
       <div className="flex flex-grow justify-center">
         <Image
-          src={`/consultation/${props.consultation.imgUrl}`}
+          src={props.consultation.imgUrl}
           alt={props.consultation.title}
-          width={500}
-          height={416}
+          width={600}
+          height={400}
         />
       </div>
-    </header>
+    </section>
   );
 };
 

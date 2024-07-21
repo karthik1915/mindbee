@@ -55,7 +55,11 @@ const InternshipForm = (props: Props) => {
   };
 
   return (
-    <form className="mx-auto max-w-xl py-4" onSubmit={handleSubmit}>
+    <form
+      id="internship-form"
+      className="mx-auto max-w-xl py-4"
+      onSubmit={handleSubmit}
+    >
       <div className="flex flex-col gap-4">
         <label htmlFor="name" className="sr-only">
           Name
@@ -126,14 +130,13 @@ const InternshipForm = (props: Props) => {
           checked={getUpdates}
           onCheckedChange={(checked: boolean) => setGetUpdates(checked)}
         />
+        <button
+          type="submit"
+          className="w-44 rounded-xl bg-headline py-2 text-center text-white transition-colors duration-200 hover:bg-teal-800"
+        >
+          Send Request
+        </button>
       </div>
-
-      <button
-        type="submit"
-        className="mt-4 w-44 rounded-xl bg-headline py-2 text-center text-white transition-colors duration-200 hover:bg-teal-800"
-      >
-        Send Request
-      </button>
     </form>
   );
 };

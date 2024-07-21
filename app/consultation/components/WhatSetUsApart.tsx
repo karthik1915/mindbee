@@ -49,7 +49,7 @@ const content: {
 const WhatSetUsApart = (props: Props) => {
   return (
     <section className="mt-20 w-screen bg-secondary">
-      <div className="mx-auto flex max-w-screen-xl flex-col items-center justify-center p-4">
+      <div className="mx-auto flex max-w-screen-xl flex-col items-center justify-center p-4 pb-8">
         <h3 className="inline-block -translate-y-10 rounded-xl bg-navbar px-6 py-2 text-center font-semibold text-white shadow-md md:text-xl lg:text-2xl">
           WHAT SET US APART
         </h3>

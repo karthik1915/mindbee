@@ -55,13 +55,15 @@ type Props = {
 
 const KeyHighlights = (props: Props) => {
   return (
-    <>
-      <h1
-        className="text-center font-exo text-4xl font-semibold"
-        aria-labelledby={`Key Hightlights of ${props.course}`}
-      >
-        Key HighLights
-      </h1>
+    <section id="key-highlights">
+      <header>
+        <h2
+          className="text-center font-exo text-4xl font-semibold text-headline"
+          aria-labelledby={`Key Hightlights of ${props.course}`}
+        >
+          Key HighLights
+        </h2>
+      </header>
       <ul className="mx-auto my-10 grid max-w-screen-2xl gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {Highlight.map((point) => {
           return (
@@ -75,7 +77,7 @@ const KeyHighlights = (props: Props) => {
           );
         })}
       </ul>
-    </>
+    </section>
   );
 };
 

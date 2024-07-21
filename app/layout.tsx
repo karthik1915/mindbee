@@ -25,7 +25,8 @@ const oxygen = Oxygen({
 
 export const metadata: Metadata = {
   title: "Mindbees Consultation",
-  description: "Mindbees salesforce consulting company",
+  description:
+    "Mindbees Consulting, we specialize in delivering comprehensive Salesforce consulting services tailored to your unique business needs. With over 15 years of IT experience and 9+ years dedicated to Salesforce development, architecture, and implementation, our team of experts is committed to driving your business forward with innovative, scalable solutions.",
   openGraph: {
     url: "https://mindbeesconsulting.com/",
     type: "website",

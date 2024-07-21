@@ -6,10 +6,10 @@ type Props = {};
 
 const Programs = (props: Props) => {
   return (
-    <section className="mx-auto max-w-7xl py-10">
-      <h1 className="text-center font-exo text-4xl font-semibold md:text-4xl">
+    <section className="mx-auto max-w-7xl py-10" role="region">
+      <h2 className="text-center font-exo text-4xl font-semibold text-headline md:text-4xl">
         Internship Programs
-      </h1>
+      </h2>
       {InternshipPrograms.map((program) => {
         return (
           <>
@@ -50,23 +50,23 @@ const Programs = (props: Props) => {
               </div>
               <div className="flex flex-col gap-x-5 gap-y-4 md:flex-row">
                 <div className="space-y-3 rounded-xl border bg-yellow-100 px-4 py-4 shadow-md hover:shadow-inner md:px-8">
-                  <h3 className="font-oxygen text-xl font-bold underline underline-offset-2 md:text-2xl">
+                  <h4 className="font-oxygen text-xl font-bold underline underline-offset-2 md:text-2xl">
                     Course Description
-                  </h3>
+                  </h4>
                   <p className="md:text-lg">{program.courseDescription}</p>
                 </div>
                 <div className="space-y-3 rounded-xl border bg-emerald-100 px-4 py-4 shadow-md hover:shadow-inner md:px-8">
-                  <h3 className="font-oxygen text-xl font-bold underline underline-offset-2 md:text-2xl">
+                  <h4 className="font-oxygen text-xl font-bold underline underline-offset-2 md:text-2xl">
                     Program Description
-                  </h3>
+                  </h4>
                   <p className="md:text-lg">{program.ProgramDescription}</p>
                 </div>
               </div>
               <div className="flex flex-col gap-x-5 gap-y-4 md:flex-row">
                 <div className="flex-grow flex-col items-start justify-center rounded-xl px-3 md:flex md:border md:bg-blue-200 md:p-5 md:shadow-md md:hover:shadow-inner">
-                  <h3 className="pb-4 text-center font-oxygen text-2xl font-bold underline underline-offset-2">
+                  <h4 className="pb-4 text-center font-oxygen text-2xl font-bold underline underline-offset-2">
                     Course Outcomes
-                  </h3>
+                  </h4>
                   <p className="text-subheadline">
                     By the end of the course, students will have gained
                     proficiency in the following key areas:
@@ -79,7 +79,7 @@ const Programs = (props: Props) => {
                 </ol>
               </div>
               <OutlineTable content={program.outline} />
-              <div className="mt-4 flex flex-wrap items-center justify-evenly gap-y-6">
+              <summary className="mt-4 flex flex-wrap items-center justify-evenly gap-y-6">
                 <div className="px-4 text-center">
                   <p>To view the full schedule, download the curriculum:</p>
                   <a
@@ -101,7 +101,7 @@ const Programs = (props: Props) => {
                     Contact us
                   </a>
                 </div>
-              </div>
+              </summary>
             </div>
             <hr />
           </>

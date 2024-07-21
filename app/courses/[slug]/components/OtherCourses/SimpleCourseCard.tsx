@@ -11,7 +11,7 @@ const SimpleCourseCard = ({ content }: Props) => {
   return (
     <Link
       href={content.link}
-      className="mx-8 my-6 min-w-[270px] max-w-[280px] rounded-2xl border border-black"
+      className="mx-8 my-6 min-w-[270px] max-w-[280px] rounded-2xl border border-black shadow-lg"
     >
       <Image
         src={content.imageUrl}

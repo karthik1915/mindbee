@@ -15,9 +15,9 @@ type Props = {
 function OtherCourses({ contents }: Props) {
   return (
     <div className="mx-auto max-w-screen-2xl py-8">
-      <p className="py-6 text-center font-exo text-2xl md:text-3xl lg:text-4xl">
+      <h2 className="py-6 text-center font-exo text-2xl text-headline md:text-3xl lg:text-4xl">
         Explore Our Other Courses
-      </p>
+      </h2>
       <Carousel className="mx-auto w-3/4">
         <CarouselContent>
           {contents.map((content) => {
