@@ -52,7 +52,7 @@ function Reviews({}: Props) {
     <section className="relative mx-auto grid w-full max-w-6xl grid-rows-[0.4fr,1fr] items-center justify-center px-4 text-center lg:grid-cols-[0.8fr,1fr] lg:grid-rows-1 lg:items-center lg:justify-start lg:text-left">
       <Dialog>
         <div>
-          <h2 className="mb-6 text-5xl font-bold text-headline">
+          <h2 className="mb-6 text-balance font-exo text-5xl font-semibold text-headline">
             What People told About us
           </h2>
           <DialogTrigger asChild>

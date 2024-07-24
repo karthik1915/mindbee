@@ -21,6 +21,7 @@ export function generateMetadata({
   const consultation = ConsulatationContent.find((c) => c.slug === params.slug);
   return {
     title: `${consultation?.title} - Mindbees Consultation`,
+    description: consultation?.description,
   };
 }
 

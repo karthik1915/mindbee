@@ -3,7 +3,7 @@ import SalesCloud from "./[slug]/slug_components/SalesCloud";
 import ServiceCloud from "./[slug]/slug_components/ServiceCloud";
 import ExperienceCloud from "./[slug]/slug_components/ExperienceCloud";
 import HealthCloud from "./[slug]/slug_components/HealthCloud";
-import FinanceCloud from "./[slug]/slug_components/FinanceClound";
+import FinanceCloud from "./[slug]/slug_components/FinanceCloud";
 import EducationCloud from "./[slug]/slug_components/EducationCloud";
 import NonProfitCloud from "./[slug]/slug_components/NonProfitCloud";
 

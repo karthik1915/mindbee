@@ -1,23 +1,24 @@
 import React from "react";
+import Image from "next/image";
 import { OfferProps } from "../../ConsultationContent";
 
 const HealthCloudOffer: OfferProps[] = [
   {
     title: "Manage patient data and track health journeys.",
-    image: "",
+    image: "/consultation/health_cloud/flowchart.png",
   },
   {
     title:
       "Collaborate across departments, clinics, and providers for better outcomes.",
-    image: "",
+    image: "/consultation/service_cloud/connection.png",
   },
   {
     title: "Secure data sharing for privacy and coordination.",
-    image: "",
+    image: "/consultation/experience_cloud/database.png",
   },
   {
     title: "Telehealth capabilities for virtual visits.",
-    image: "",
+    image: "/consultation/sales_cloud/training.png",
   },
 ];
 
@@ -41,15 +42,15 @@ const HealthCloud = () => {
           return (
             <div
               key={offer.title}
-              className="flex w-full flex-col items-center gap-2 md:w-1/2"
+              className="flex w-full flex-col items-center gap-4 md:w-1/2"
             >
-              {/* <Image
-                      src={offer.image}
-                      alt={offer.title}
-                      width={200}
-                      height={200}
-                    /> */}
-              <div className="size-[200px] rounded-full bg-secondary"></div>
+              <Image
+                src={offer.image}
+                alt={offer.title}
+                width={200}
+                height={200}
+              />
+              {/* <div className="size-[200px] rounded-full bg-secondary"></div> */}
               <div>
                 <h3 className="text-pretty px-3 text-center font-oxygen text-xl text-headline">
                   {offer.title}

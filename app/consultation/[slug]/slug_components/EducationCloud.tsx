@@ -1,22 +1,23 @@
 import React from "react";
+import Image from "next/image";
 import { OfferProps } from "../../ConsultationContent";
 
 const EducationCloudOffer: OfferProps[] = [
   {
     title: "Recruitment and admissions experiences",
-    image: "",
+    image: "/consultation/education_cloud/recruitment.png",
   },
   {
     title: "Higher education marketing",
-    image: "",
+    image: "/consultation/education_cloud/education.png",
   },
   {
     title: "Advanced alumni and engagement",
-    image: "",
+    image: "/consultation/service_cloud/connection.png",
   },
   {
     title: "Educational Data Architecture (EDA)",
-    image: "",
+    image: "/consultation/health_cloud/flowchart.png",
   },
 ];
 
@@ -41,15 +42,15 @@ const EducationCloud = () => {
           return (
             <div
               key={offer.title}
-              className="flex w-full flex-col items-center gap-2 md:w-1/2"
+              className="flex w-full flex-col items-center gap-4 md:w-1/2"
             >
-              {/* <Image
-                      src={offer.image}
-                      alt={offer.title}
-                      width={200}
-                      height={200}
-                    /> */}
-              <div className="size-[200px] rounded-full bg-secondary"></div>
+              <Image
+                src={offer.image}
+                alt={offer.title}
+                width={200}
+                height={200}
+              />
+              {/* <div className="size-[200px] rounded-full bg-secondary"></div> */}
               <div>
                 <h3 className="text-pretty px-3 text-center font-oxygen text-xl text-headline">
                   {offer.title}

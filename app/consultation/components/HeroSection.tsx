@@ -15,7 +15,7 @@ const HeroSection = (props: Props) => {
     link,
   }));
   return (
-    <section className="mx-auto flex max-w-screen-2xl flex-col flex-wrap py-5 pt-[100px] lg:flex-row">
+    <section className="mx-auto flex max-w-screen-2xl flex-col flex-wrap gap-y-4 py-5 pt-[120px] lg:flex-row">
       <div className="flex flex-col justify-center gap-5 px-5 lg:w-1/2">
         <BreadCrumbs
           parent={{

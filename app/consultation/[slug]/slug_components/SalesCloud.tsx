@@ -12,7 +12,7 @@ const SalesCloudOffer: OfferProps[] = [
       "Expert services to improve and troubleshoot",
       "On-demand consulting",
     ],
-    image: "/consultation/sales_cloud/salesforce.png",
+    image: "/consultation/sales_cloud/crm.png",
   },
   {
     title: "Salesforce Training",
@@ -58,8 +58,8 @@ const SalesCloud = (): React.ReactNode => {
 const Card = ({ title, subtitle, points, image }: OfferProps) => {
   return (
     <div className="flex flex-col items-center gap-5 px-4 md:flex-row lg:pl-8">
-      {/* <Image src={image} alt={title} width={100} height={100} />*/}
-      <div className="gapx size-[200px] flex-shrink-0 rounded-full bg-secondary"></div>
+      <Image src={image} alt={title} width={200} height={200} />
+      {/* <div className="gapx size-[200px] flex-shrink-0 rounded-full bg-secondary"></div> */}
       <div className="flex flex-col items-center md:items-start">
         <h3 className="text-center font-oxygen text-3xl text-headline">
           {title}

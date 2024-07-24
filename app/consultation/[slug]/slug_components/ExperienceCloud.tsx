@@ -1,22 +1,23 @@
 import React from "react";
+import Image from "next/image";
 import { OfferProps } from "../../ConsultationContent";
 
 const ExperienceOffer: OfferProps[] = [
   {
     title: "Development of a User Account Portal",
-    image: "",
+    image: "/consultation/experience_cloud/user_account.png",
   },
   {
     title: "Availability of Data from Third Party or Legacy Sources",
-    image: "",
+    image: "/consultation/experience_cloud/database.png",
   },
   {
     title: "Creation of a Self-Service Portal",
-    image: "",
+    image: "/consultation/experience_cloud/self_service_portal.png",
   },
   {
     title: "Delivery of Touch-Points across Device Types",
-    image: "",
+    image: "/consultation/experience_cloud/responsive.png",
   },
 ];
 
@@ -36,20 +37,20 @@ const ExperienceCloud = () => {
           capitalize on this community-strengthening platform.
         </h3>
       </header>
-      <div className="flex flex-wrap items-center justify-center gap-y-6 py-12">
+      <div className="flex flex-wrap items-center justify-center gap-y-8 py-12">
         {ExperienceOffer.map((offer) => {
           return (
             <div
               key={offer.title}
-              className="flex w-full flex-col items-center gap-2 md:w-1/2"
+              className="flex w-full flex-col items-center gap-4 md:w-1/2"
             >
-              {/* <Image
-                      src={offer.image}
-                      alt={offer.title}
-                      width={200}
-                      height={200}
-                    /> */}
-              <div className="size-[200px] rounded-full bg-secondary"></div>
+              <Image
+                src={offer.image}
+                alt={offer.title}
+                width={200}
+                height={200}
+              />
+              {/* <div className="size-[200px] rounded-full bg-secondary"></div> */}
               <div>
                 <h3 className="text-pretty px-3 text-center font-oxygen text-xl text-headline">
                   {offer.title}

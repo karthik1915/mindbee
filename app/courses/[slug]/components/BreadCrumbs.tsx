@@ -16,7 +16,7 @@ type Props = {
 
 const BreadCrumbs = (props: Props) => {
   return (
-    <nav role="breadcrumbs" className="flex flex-wrap items-center">
+    <nav role="navigation" className="flex flex-wrap items-center">
       <Link href="/">Home</Link>
       <ChevronRight className="inline" size={20} />
       <Link href={props.parent.link} className="inline">

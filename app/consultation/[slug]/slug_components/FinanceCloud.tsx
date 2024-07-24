@@ -3,11 +3,26 @@ import Image from "next/image";
 import { OfferProps } from "@/app/consultation/ConsultationContent";
 
 const FinancialServicesOffer: OfferProps[] = [
-  { image: "", title: "Unified view of customer account data" },
-  { image: "", title: "Compliance and risk management" },
-  { image: "", title: "Customized investment portfolio creation" },
-  { image: "", title: "Financial goal tracking" },
-  { image: "", title: "Comprehensive wealth management" },
+  {
+    image: "/consultation/financial_cloud/dashboard.png",
+    title: "Unified view of customer account data",
+  },
+  {
+    image: "/consultation/financial_cloud/risk.png",
+    title: "Compliance and risk management",
+  },
+  {
+    image: "/consultation/financial_cloud/investment.png",
+    title: "Customized investment portfolio creation",
+  },
+  {
+    image: "/consultation/financial_cloud/goal.png",
+    title: "Financial goal tracking",
+  },
+  {
+    image: "/consultation/financial_cloud/wealth.png",
+    title: "Comprehensive wealth management",
+  },
 ];
 
 const FinanceCloud = () => {
@@ -31,15 +46,15 @@ const FinanceCloud = () => {
           return (
             <div
               key={offer.title}
-              className="flex w-full flex-col items-center gap-2 md:w-1/2 lg:w-1/3"
+              className="flex w-full flex-col items-center gap-4 md:w-1/2 lg:w-1/3"
             >
-              {/* <Image
+              <Image
                 src={offer.image}
                 alt={offer.title}
                 width={200}
                 height={200}
-              /> */}
-              <div className="size-[200px] rounded-full bg-secondary"></div>
+              />
+              {/* <div className="size-[200px] rounded-full bg-secondary"></div> */}
               <div>
                 <h3 className="text-pretty px-3 text-center font-oxygen text-xl text-headline">
                   {offer.title}
