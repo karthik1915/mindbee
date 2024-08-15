@@ -5,7 +5,7 @@ import React, { useRef, useState, FormEvent } from "react";
 import { postData, FormData } from "@/app/actions/postForms";
 import { Switch } from "@/components/ui/switch";
 import { useToast } from "@/components/ui/use-toast";
-import { Check, CircleX, Loader2Icon } from "lucide-react";
+import { Loader2Icon } from "lucide-react";
 
 const ContactForm = () => {
   const nameRef = useRef<HTMLInputElement>(null);
@@ -52,7 +52,6 @@ const ContactForm = () => {
       toast({
         title: "Error Sending Message",
         description: "Oops, something went wrong. Please try again later!",
-        variant: "destructive",
       });
     }
     // console.log(formData);
@@ -131,8 +130,6 @@ const ContactForm = () => {
           className="flex w-44 items-center justify-center gap-3 rounded-xl bg-headline px-3 py-2 text-white transition-colors duration-200 hover:bg-teal-800"
         >
           {loading && <Loader2Icon className="animate-spin" />}
-          {success === true && <Check />}
-          {success === false && <CircleX />}
           Send Message
         </button>
       </div>

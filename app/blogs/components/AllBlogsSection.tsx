@@ -1,6 +1,6 @@
 import React from "react";
-import BlogCard from "./BlogCard";
 import { ArrowDownWideNarrow } from "lucide-react";
+import BlogCardSkeleton from "./BlogCardSkeleton";
 
 type Props = {};
 
@@ -17,11 +17,11 @@ const AllBlogsSection = (props: Props) => {
         </div>
       </div>
       <div className="flex flex-wrap justify-center">
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        <BlogCardSkeleton />
+        <BlogCardSkeleton />
+        <BlogCardSkeleton />
+        <BlogCardSkeleton />
+        <BlogCardSkeleton />
       </div>
     </div>
   );

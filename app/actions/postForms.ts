@@ -1,9 +1,5 @@
 "use server";
-import {
-  DynamoDBClient,
-  PutItemCommand,
-  AttributeValue,
-} from "@aws-sdk/client-dynamodb";
+import supabase from "@/lib/supabase";
 
 export interface FormData {
   form_type: "main_form" | "course_form" | "internship_form" | "review_form";
@@ -15,36 +11,27 @@ export interface FormData {
   get_updates: boolean;
 }
 
-const client = new DynamoDBClient({
-  region: process.env.AWS_REGION,
-  credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
-  },
-});
-
 export async function postData(formData: FormData) {
-  const params = {
-    TableName: "mindbee",
-    Item: {
-      form_type: { S: formData.form_type },
-      form_name: { S: formData.form_name },
-      name: { S: formData.name },
-      email: { S: formData.email },
-      mobile: { S: formData.mobile },
-      created_at: { S: new Date().toISOString() },
-      get_updates: { BOOL: formData.get_updates },
-      is_contacted: { BOOL: false },
-      //
-      ...(formData.message && { message: { S: formData.message } }),
-    } as { [key: string]: AttributeValue },
-  };
+  const { error } = await supabase
+    .schema("mindbees_consulting")
+    .from("contact_forms")
+    .insert([
+      {
+        form_type: formData.form_type,
+        form_name: formData.form_name,
+        name: formData.name,
+        email: formData.email,
+        mobile: formData.mobile,
+        get_updates: formData.get_updates,
+        is_contacted: false,
+        ...(formData.message && { message: formData.message }),
+      },
+    ]);
 
-  try {
-    await client.send(new PutItemCommand(params));
-    return { success: true, message: "Data posted successfully" };
-  } catch (err) {
-    console.error("Error posting data:", err);
+  if (error) {
+    console.error("Error posting data:", error);
     return { success: false, message: "Internal Server Error" };
   }
+
+  return { success: true, message: "Data posted successfully" };
 }

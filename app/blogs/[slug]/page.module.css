@@ -1,5 +1,5 @@
 .blogContainer {
-    @apply mx-auto min-h-screen max-w-screen-lg pt-[110px] prose px-4;
+    @apply mx-auto min-h-screen max-w-screen-xl pt-[110px] prose px-4;
 }
 
 .blogTitle {

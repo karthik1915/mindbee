@@ -1,13 +1,6 @@
 "use client";
 import * as React from "react";
 import Link from "next/link";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 import Sidebar from "./sidebar";
 import NavServices from "./NavServices";
 import ScrollLink from "./ScrollLink";

@@ -4,7 +4,7 @@ import {
   DescriptionFallback1,
   DescriptionFallback2,
   TitleFallback,
-} from "./LatestBlogCard";
+} from "./LatestBlogCardSkeleton";
 
 type Props = {
   //   title: string;
@@ -14,7 +14,7 @@ type Props = {
   //   date: string;
 };
 
-const BlogCard = (props: Props) => {
+const BlogCardSkeleton = (props: Props) => {
   return (
     <div className="m-4 w-80 rounded-2xl bg-background p-2 font-oxygen">
       <BlogFallbackImage />
@@ -46,4 +46,4 @@ const BlogFallbackImage = () => {
   );
 };
 
-export default BlogCard;
+export default BlogCardSkeleton;
