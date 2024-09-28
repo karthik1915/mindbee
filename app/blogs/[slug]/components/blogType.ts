@@ -5,6 +5,7 @@ export interface BlogType {
   content: string;
   slug: string;
   tags: string[];
+  category: string;
   created_at: string;
   updated_at: string;
 }

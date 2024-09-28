@@ -3,6 +3,9 @@
 }
 
 .blogTitle {
-    @apply text-4xl font-oxygen text-center;
+    @apply text-4xl font-oxygen text-center mb-1;
 }
 
+.blogFooter {
+    @apply mx-auto prose px-4 max-w-screen-xl my-4; 
+}

@@ -17,8 +17,9 @@ const NavServices = () => {
           className="transition-transform duration-150 group-hover:rotate-90"
         />
       </ScrollLink>
+
       <div
-        className="absolute right-0 top-12 flex w-60 translate-x-1/2 flex-col gap-3 rounded-xl bg-background px-5 py-6 opacity-0 shadow-xl transition-opacity duration-150 group-hover:opacity-100"
+        className="absolute right-0 top-12 hidden w-60 translate-x-1/2 flex-col gap-3 rounded-xl bg-background px-5 py-6 shadow-xl transition-opacity duration-150 group-hover:flex"
         role="menu"
       >
         <ScrollLink

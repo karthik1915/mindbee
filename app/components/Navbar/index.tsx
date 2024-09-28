@@ -34,7 +34,9 @@ const NavBar = (props: Props) => {
         >
           About
         </ScrollLink>
+
         <NavServices />
+
         <Link
           aria-label="Our Blogs"
           className="px-2 py-1 text-xl lg:text-2xl"
