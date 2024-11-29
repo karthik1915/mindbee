@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import PieChart from "./Charts/piechart";
+import PieChartComponent from "./Charts/piechart";
 import HeroSection from "./components/HeroSection";
 import OtherCourses from "./components/OtherCourses";
 import KeyHighlights from "./components/KeyHighLight";
@@ -50,11 +50,14 @@ function Page({ params }: { params: { slug: string } }) {
 
   return (
     <>
+      <NavBar />
       <header>
-        <NavBar />
         <div className="mx-auto my-10 flex w-full max-w-screen-2xl flex-col items-center pt-[80px] lg:flex-row">
           <HeroSection content={courseData} otherCourseData={otherCourseData} />
-          <PieChart data={courseData.data} badge={courseData.badgeUrl} />
+          <PieChartComponent
+            data={courseData.data}
+            badge={courseData.badgeUrl}
+          />
         </div>
       </header>
       <main id="courses-hero">

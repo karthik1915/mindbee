@@ -5,7 +5,7 @@ interface DetailProps {
 }
 
 export const Details: DetailProps = {
-  address: "Seshangur ,Villupuram ,Tamilnadu-605501",
+  address: "Seshangur, Villupuram, Tamilnadu-605501",
   number: "+91 8825640296 ",
-  mail: "mindbeeesconsulting@gmail.com",
+  mail: "mindbeesconsulting@gmail.com",
 };

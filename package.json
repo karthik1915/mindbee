@@ -26,9 +26,9 @@
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
+    "recharts": "^2.13.3",
     "sharp": "^0.33.4",
-    "tailwindcss-animate": "^1.0.7",
-    "victory": "^37.0.2"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",

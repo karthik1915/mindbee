@@ -22,7 +22,7 @@ const SimpleCourseCard = ({ content }: Props) => {
         className="rounded-t-2xl"
       />
       <div className="px-2 py-4 text-center">
-        <p className="text-wrap text-center font-oxygen text-xl">
+        <p className="text-wrap break-words text-center font-oxygen text-xl">
           {content.title}
         </p>
         <div className="flex justify-center gap-3 py-3">

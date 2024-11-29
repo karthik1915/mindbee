@@ -1,10 +1,21 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
-import { FollowerPointerCard } from "@/components/ui/following-pointer";
-import { VictoryContainer, VictoryPie, VictoryThemeDefinition } from "victory";
 
-const chartColors: string[] = [
+import * as React from "react";
+import { Pie, PieChart } from "recharts";
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart";
+import { courseDataType } from "./data";
+
+type Props = {
+  data: courseDataType[];
+  badge: string;
+};
+
+const colors: string[] = [
   "#e74c3c", // Red
   "#2ecc71", // Green
   "#f1c40f", // Yellow
@@ -14,112 +25,36 @@ const chartColors: string[] = [
   "#34495e", // Dark Blue
 ];
 
-type Props = {
-  data: { x: string; y: number }[];
-  badge: string;
-};
+export default function PieChartComponent({ data, badge }: Props) {
+  const generateChartConfig = (
+    data: { x: string; y: number }[],
+    colors: string[],
+  ): ChartConfig => {
+    return data.reduce((config, item, index) => {
+      config[item.x] = {
+        label: item.x, // Use the `x` value as the label
+        color: colors[index % colors.length], // Cycle through the colors array
+      };
+      return config;
+    }, {} as ChartConfig);
+  };
 
-const customTheme: VictoryThemeDefinition = {
-  pie: {
-    colorScale: chartColors,
-  },
-};
+  const chartConfig = generateChartConfig(data, colors);
 
-// Function to break text into lines after every three words
-const formatLabel = (text: string) => {
-  const words = text.split(" ");
-  let formattedText = "";
-  for (let i = 0; i < words.length; i++) {
-    formattedText += words[i];
-    if ((i + 1) % 3 === 0 && i !== words.length - 1) {
-      formattedText += "\n";
-    } else {
-      formattedText += " ";
-    }
-  }
-  return formattedText.trim();
-};
-
-function PieChart({ data, badge }: Props) {
-  const [currentTitle, setCurrentTitle] = useState<string>("Course Details");
-  const [currentColor, setCurrentColor] = useState<string>("#095AF1");
+  const formattedData = data.map((item) => ({
+    ...item,
+    fill: chartConfig[item.x]?.color,
+  }));
 
   return (
-    <FollowerPointerCard
-      aria-hidden
-      title={<TitleComponent title={currentTitle} color={currentColor} />}
-      className="relative h-72 w-full md:h-80 md:w-1/2 lg:h-96"
+    <ChartContainer
+      config={chartConfig}
+      className="mx-auto aspect-square h-full max-h-[250px] w-1/3 pb-0 [&_.recharts-pie-label-text]:fill-foreground"
     >
-      <div
-        onMouseEnter={() => setCurrentTitle("Achievement Badge")}
-        onMouseLeave={() => setCurrentTitle("Course Details")}
-        className="absolute left-1/2 top-1/2 z-10 size-24 -translate-x-1/2 -translate-y-1/2"
-      >
-        <Image src={badge} alt="course badge" width={96} height={96} />
-      </div>
-      <VictoryPie
-        containerComponent={
-          <VictoryContainer style={{ touchAction: "auto" }} />
-        }
-        data={data}
-        animate={{
-          duration: 1000,
-        }}
-        padAngle={2}
-        labelPosition={"centroid"}
-        style={{ labels: { fontSize: 12 } }}
-        theme={customTheme}
-        labels={({ datum }) => ""}
-        innerRadius={80}
-        events={[
-          {
-            target: "data",
-            eventHandlers: {
-              onMouseEnter: (evt, props) => {
-                setCurrentTitle(props.datum.x);
-                setCurrentColor(chartColors[props.index % chartColors.length]);
-              },
-              onMouseLeave: () => {
-                setCurrentTitle("Course Details");
-              },
-            },
-          },
-        ]}
-      />
-      {/* <VictoryLegend
-        x={125}
-        y={50}
-        title="Legend"
-        centerTitle
-        orientation="vertical"
-        gutter={20}
-        containerComponent={
-          <VictoryContainer
-            style={{
-              touchAction: "auto",
-            }}
-          />
-        }
-        style={{ border: { stroke: "black" }, title: { fontSize: 20 } }}
-        data={data.map((d) => ({ name: d.x }))}
-      /> */}
-    </FollowerPointerCard>
+      <PieChart>
+        <ChartTooltip content={<ChartTooltipContent />} />
+        <Pie data={formattedData} dataKey="y" label nameKey="x"></Pie>
+      </PieChart>
+    </ChartContainer>
   );
 }
-
-const TitleComponent = ({
-  title,
-  color = "#ff000f",
-}: {
-  title: string;
-  color?: string;
-}) => (
-  <div
-    className="rounded-full border-2 px-4 py-1 text-base shadow-lg"
-    style={{ backgroundColor: color }}
-  >
-    <p>{title}</p>
-  </div>
-);
-
-export default PieChart;

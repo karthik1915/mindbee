@@ -69,7 +69,7 @@ function Footer() {
       </div>
 
       {/* Divider Line */}
-      <hr className="mx-6 border-b border-gray-200/20" />
+      <hr className="mx-3" />
 
       {/* Copyright Section */}
       <div className="my-4 px-8 text-center">
@@ -108,8 +108,10 @@ type ContactInfoProps = {
 const ContactInfo = ({ icon: Icon, text }: ContactInfoProps) => {
   return (
     <div className="flex items-center space-x-2">
-      <Icon fill={primaryColor} width={20} height={20} />
-      <span>{text}</span>
+      <div className="h-5 w-5">
+        <Icon fill={primaryColor} width={20} height={20} />
+      </div>
+      <span className="text-balance">{text}</span>
     </div>
   );
 };
