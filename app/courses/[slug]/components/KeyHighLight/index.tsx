@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Certificate, Instructions, Videos } from "./Icons";
+import { Certificate, Videos } from "./Icons";
 import {
   CalendarCheck,
   Rocket,
